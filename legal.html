@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal & Identity | CopyRight Systems</title>
+    <script src="navigation.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        /* INTERIOR PAGE LAYOUT - THE BLUEPRINT */
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+        html {
+            height: 100%;
+            margin: 0;
+            background: #0f172a;
+            /* Match footer color */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fff;
+            line-height: 1.6;
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blueprint-section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .blueprint-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .wide-container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .blueprint-header {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            color: #111;
+            letter-spacing: -0.02em;
+        }
+
+        .blueprint-columns {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        /* The Strategy (Left Column) */
+        .strategy-block {
+            background: #f8fafc;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-blue);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .strategy-block h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .strategy-block p {
+            font-size: 1.1rem;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* The Menu (Right Column) */
+        .menu-block {
+            padding-top: 20px;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+        }
+
+        .menu-item span {
+            color: var(--primary-blue) !important;
+            font-size: 32px;
+            margin-top: 4px;
+        }
+
+        .menu-item strong {
+            color: #111;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .menu-item div {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #4b5563;
+        }
+
+        /* Bronze Plaque CTA */
+        .blueprint-btn {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 18px 40px;
+            background: var(--primary-blue);
+            color: white;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 100px;
+            box-shadow: 0 4px 12px rgba(0, 98, 255, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .blueprint-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        @media(max-width: 1100px) {
+            .blueprint-columns {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+
+        /* HEADER */
+        header {
+            padding: 40px 40px 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--primary-blue);
+        }
+
+        /* NAV */
+        nav {
+            background: white;
+            padding: 0 40px 0 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            margin-left: -40px;
+        }
+
+        .nav-links a {
+            color: var(--deep-charcoal);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .site-search {
+            display: flex;
+            align-items: center;
+            background: #f3f4f6;
+            padding: 6px 15px;
+            border-radius: 100px;
+            border: 1px solid #e5e7eb;
+            width: 300px;
+            margin-left: auto;
+        }
+
+        .site-search input {
+            border: none;
+            background: transparent;
+            outline: none;
+            margin-left: 10px;
+            width: 100%;
+            font-size: 0.8rem;
+            color: var(--dark);
+            font-family: inherit;
+        }
+
+        .site-search .material-symbols-outlined {
+            color: #9ca3af;
+            font-size: 1.1rem;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            height: 300px;
+            background: #222 url('./assets/copyright_staff_hero.png') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-overlay-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 1.76rem;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+        }
+
+        /* LOGISTICS GRID & CARDS */
+        .logistics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .logistics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .logistics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .logistics-card {
+            background: var(--white);
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: 0.2s;
+        }
+
+        .logistics-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-icon-round {
+            width: 50px;
+            height: 50px;
+            background: #F0F7FF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .card-icon-round .material-symbols-outlined {
+            font-size: 24px;
+        }
+
+        /* STICKY CHECKOUT BAR */
+        .checkout-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--deep-charcoal);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 2000;
+        }
+
+        .progress-info {
+            flex: 1;
+        }
+
+        .progress-text {
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .price-value-box {
+            text-align: center;
+            flex: 1;
+        }
+
+        .price-label {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+        }
+
+        .price-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .btn-track {
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-track:hover {
+            background: #0056E0;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: auto;
+        }
+
+        /* --- BOOKING MODAL STYLES --- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            width: 100%;
+            max-width: 550px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            animation: modalSlide 0.3s ease-out;
+        }
+
+        @keyframes modalSlide {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: var(--deep-charcoal);
+            color: white;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .close-modal {
+            background: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            opacity: 0.7;
+            transition: 0.2s;
+        }
+
+        .close-modal:hover {
+            opacity: 1;
+        }
+
+        .modal-body {
+            padding: 32px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .step-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .type-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .type-btn {
+            padding: 24px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .type-btn:hover {
+            border-color: var(--primary-blue);
+            background: #f0f7ff;
+        }
+
+        .type-btn.active {
+            border-color: var(--primary-blue);
+            background: #f0f7ff;
+            box-shadow: 0 0 0 4px rgba(0, 61, 167, 0.1);
+        }
+
+        .type-btn span.material-symbols-outlined {
+            font-size: 2rem;
+            color: var(--primary-blue);
+        }
+
+        .type-btn strong {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .type-btn small {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--deep-charcoal);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 61, 167, 0.1);
+        }
+
+        .disclaimer-box {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .disclaimer-box p {
+            font-size: 0.8rem;
+            color: #9a3412;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .btn-confirm {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-confirm:hover {
+            filter: brightness(1.1);
+        }
+
+        .store-info-pane {
+            text-align: center;
+        }
+
+        .policy-note {
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
+        /* --- BOOKING MODAL STYLES --- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            width: 100%;
+            max-width: 550px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            animation: modalSlide 0.3s ease-out;
+        }
+
+        @keyframes modalSlide {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: var(--deep-charcoal);
+            color: white;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .close-modal {
+            background: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            opacity: 0.7;
+            transition: 0.2s;
+        }
+
+        .close-modal:hover {
+            opacity: 1;
+        }
+
+        .modal-body {
+            padding: 32px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .step-title {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .type-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .type-btn {
+            padding: 24px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            background: white;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .type-btn:hover {
+            border-color: var(--primary-blue);
+            background: #f0f7ff;
+        }
+
+        .type-btn.active {
+            border-color: var(--primary-blue);
+            background: #f0f7ff;
+            box-shadow: 0 0 0 4px rgba(0, 61, 167, 0.1);
+        }
+
+        .type-btn span.material-symbols-outlined {
+            font-size: 2rem;
+            color: var(--primary-blue);
+        }
+
+        .type-btn strong {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .type-btn small {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--deep-charcoal);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 61, 167, 0.1);
+        }
+
+        .disclaimer-box {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .disclaimer-box p {
+            font-size: 0.8rem;
+            color: #9a3412;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .btn-confirm {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-confirm:hover {
+            filter: brightness(1.1);
+        }
+
+        .store-info-pane {
+            text-align: center;
+        }
+
+        .policy-note {
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
+        /* STATUS GLOW ANIMATION */
+        @keyframes emerald-glow {
+            0% {
+                box-shadow: 0 0 4px #10B981, 0 0 10px rgba(16, 185, 129, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 12px #10B981, 0 0 20px rgba(16, 185, 129, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 0 4px #10B981, 0 0 10px rgba(16, 185, 129, 0.4);
+            }
+        }
+
+        .dot-glow {
+            animation: emerald-glow 2s infinite ease-in-out;
+            background-color: #10B981 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="hero"
+        style="position: relative; height: 300px; display: flex; align-items: center; background: url('./assets/copyright_staff_hero.png') center/cover no-repeat; color: var(--white); overflow: visible; z-index: 3000;">
+
+        <!-- Lightened Overlay (30% opacity) -->
+        <div class="hero-overlay-mask"
+            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); z-index: 1;">
+        </div>
+
+        <!-- Left-Aligned Hero Content -->
+        <div class="container"
+            style="position: relative; z-index: 100; width: 100%; max-width: none; padding: 0 40px; margin: 0; display: flex; flex-direction: column; align-items: center; height: 100%;">
+
+            <!-- Brand Logo Text (Non-Image) - Aligned to Home Page Style -->
+            <div style="position: absolute; left: 40px; top: 15px;">
+                <div
+                    style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.6rem; font-weight: 800; line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
+                    <span style="color: white;">COPYRIGHT</span><span style="color: #0062FF;">PRINTING</span>
+                </div>
+            </div>
+
+            <!-- Cat Logo - Synchronized with Home Page -->
+            <img src="./assets/cr_logo_cat.png" alt="CopyRight Logo"
+                style="position: absolute; right: 40px; top: 140px; height: 100px; width: auto; opacity: 0.7; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); z-index: -1;">
+
+            <!-- Business Block -->
+            <div class="business-block"
+                style="position: absolute; left: 40px; top: 65px; text-align: left; font-size: 0.75rem; font-weight: 500; line-height: 1.5; color: var(--white); text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
+                <!-- 1. Open Status -->
+                <div class="status-indicator"
+                    style="display: flex; align-items: center; gap: 0.6rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 0.2rem;">
+                    <div id="store-status-dot"
+                        style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444; border: 1px solid rgba(0,0,0,0.1); transition: all 0.3s; flex-shrink: 0;">
+                    </div>
+                    <span id="store-status-text"
+                        style="color: #EF4444; font-size: 1.1rem; line-height: 1;">CLOSED</span>
+                </div>
+                <!-- 2. Weekday Hours -->
+                <div>M-F 9:00 AM - 5:00 PM</div>
+                <!-- 3. Weekend Hours -->
+                <div>SAT 11:00 AM - 2:00 PM</div>
+                <!-- 4. Address Line 1 -->
+                <div style="margin-top: 0.4rem;">5708 Hollister Avenue</div>
+                <!-- 5. Location Note -->
+                <div style="font-style: italic; opacity: 0.9;">under the red awning</div>
+                <!-- 6. City/State -->
+                <div>Goleta CA 93117</div>
+                <!-- 7. Email -->
+                <div style="margin-top: 0.4rem;">
+                    <a href="mailto:orders@copyrightsb.com"
+                        style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">orders@copyrightsb.com</a>
+                </div>
+            </div>
+
+            <!-- Spacer with Hero Title (Raised) -->
+            <div
+                style="height: 48px; width: 100%; display: flex; align-items: flex-end; justify-content: center; margin-top: -10px;">
+                <h1 class="hero-title"
+                    style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.76rem; margin: 0; font-weight: 800; text-align: center; width: 100%; line-height: 1; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); color: white;">
+                    THE IDENTITY ANCHOR.
+                </h1>
+            </div>
+
+            <!-- Action Buttons (Centered Stack) -->
+            <div
+                style="flex-grow: 1; display: flex; align-items: center; justify-content: center; width: 100%; position: relative;">
+                <div class="action-stack"
+                    style="display: flex; flex-direction: column; gap: 0.6rem; align-items: center; justify-content: center; margin-top: -5px; width: 100%;">
+
+                    <!-- 1. Track Package -->
+                    <button class="btn btn-track" onclick="toggleTrackingModal()"
+                        style="padding: 0.5rem; width: 280px; background-color: #0062FF; color: var(--white); border-radius: 14px; border: none; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;">
+                        <span style="font-weight: 800; font-size: 0.9rem;">TRACK PACKAGE</span>
+                        <span style="font-size: 0.65rem; opacity: 0.9; font-weight: 500;">UPS, FedEx, DHL, USPS</span>
+                    </button>
+
+                    <!-- 2. Start Copy Order -->
+                    <button class="btn btn-white" onclick="window.location.href='print.html'"
+                        style="padding: 0.5rem; width: 280px; height: 48px; background-color: var(--white); color: var(--deep-charcoal); border-radius: 14px; border: none; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s;">
+                        <span style="font-weight: 800; font-size: 0.9rem;">START COPY ORDER</span>
+                    </button>
+
+                    <!-- 3. Book Services (Dropdown) -->
+                    <div style="position: relative; display: inline-block; z-index: 10001;">
+                        <button onclick="toggleAppointmentMenu()" id="bookBtn"
+                            style="background: #d4af37; color: #000; padding: 0.5rem; width: 280px; border: none; font-weight: 800; text-transform: uppercase; cursor: pointer; border-radius: 14px; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; height: 48px;">
+                            BOOK A SERVICE <span id="btnArrow">↓</span>
+                        </button>
+
+                        <div id="appointmentDropdown"
+                            style="display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 650px; background: #1A1A1A; border: 1px solid #D4AF37; z-index: 999999 !important; box-shadow: 0 20px 50px rgba(0,0,0,0.9); border-radius: 12px; overflow: hidden; text-align: left; padding: 25px;">
+
+                            <div style="display: flex; gap: 20px; justify-content: space-between;">
+                                <!-- Pillar 1: IN-OFFICE -->
+                                <div
+                                    style="flex: 1; border-right: 1px solid rgba(212, 175, 55, 0.2); padding-right: 10px;">
+                                    <div
+                                        style="font-size: 0.75rem; font-weight: 900; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 4px;">
+                                        IN-OFFICE</div>
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/notary" target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Notary <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/live-scan" target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Live Scan <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/shred-while-you-wait"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Shred-While-You-Wait <span>→</span></a>
+                                    </div>
+                                </div>
+
+                                <!-- Pillar 2: MOBILE UNITS -->
+                                <div
+                                    style="flex: 1; border-right: 1px solid rgba(212, 175, 55, 0.2); padding-right: 10px;">
+                                    <div
+                                        style="font-size: 0.75rem; font-weight: 900; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 4px;">
+                                        MOBILE UNITS</div>
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/mobile-services-notary"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Mobile Notary <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/mobile-services-live-scan"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Mobile Live Scan <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/mobile-services-shredding"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Mobile Shredding <span>→</span></a>
+                                    </div>
+                                </div>
+
+                                <!-- Pillar 3: CREATIVE -->
+                                <div style="flex: 1;">
+                                    <div
+                                        style="font-size: 0.75rem; font-weight: 900; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 4px;">
+                                        CREATIVE</div>
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/graphic-design" target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Graphic & Web Design <span>→</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function toggleAppointmentMenu() {
+                    var d = document.getElementById("appointmentDropdown");
+                    var a = document.getElementById("btnArrow");
+                    var isHidden = (d.style.display === "none" || d.style.display === "");
+                    d.style.display = isHidden ? "block" : "none";
+                    a.innerHTML = isHidden ? "↑" : "↓";
+                }
+
+                window.onclick = function (e) {
+                    if (!e.target.closest('#bookBtn')) {
+                        var d = document.getElementById("appointmentDropdown");
+                        if (d) {
+                            d.style.display = "none";
+                            document.getElementById("btnArrow").innerHTML = "↓";
+                        }
+                    }
+                }
+            </script>
+        </div>
+        <!-- Neural Cat AI Bar -->
+        <div class="neural-cat-bar"
+            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.5rem 0; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(5px); z-index: 20; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="container" style="max-width: none; padding: 0 40px;">
+                <div class="neural-content" style="display: flex; align-items: center; justify-content: space-between;">
+                    <div class="neural-label"
+                        style="font-size: 0.7rem; letter-spacing: 0.2em; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.8rem;">
+                        <img src="./assets/neural_cat_logo.png" alt="Neural Cat AI" class="neural-icon-img"
+                            style="width: 18px; height: 18px;">
+                        POWERED BY NEURAL CAT AI
+                    </div>
+                    <div class="everytown-label"
+                        style="font-size: 0.7rem; letter-spacing: 0.2em; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.8rem;">
+                        SHOP EVERYTOWN
+                        <img src="./assets/shopeverytown-logo-white.png" alt="Shop EveryTown" class="everytown-icon-img"
+                            style="width: 18px; height: 18px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav
+        style="background: white; border-bottom: 1px solid #eee; padding: 0 40px 0 0; height: 60px; display: flex; align-items: center;">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="shipping.html">Shipping</a>
+                <a href="mailboxes.html">Mailboxes</a>
+                <a href="print.html">Copy & Print</a>
+                <a href="legal.html" style="color: #4ade80;">Legal</a>
+                <a href="ai-tools.html">AI Tools</a>
+                <a href="branding.html">Branding</a>
+                <a href="creative.html">Creative & Publishing</a>
+                <a href="retail.html">Retail</a>
+            </div>
+            <div class="site-search">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Search services...">
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding: 20px 0; background: #fff;">
+        <div class="wide-container">
+            <!-- Row 1: Identity & Certification -->
+            <div style="margin-bottom: 4rem;">
+                <h3
+                    style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.5rem; font-weight: 800; text-transform: uppercase; color: var(--deep-charcoal); margin-bottom: 2.5rem; text-align: center;">
+                    Identity & Certification
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <!-- Card 1: Notary Public -->
+                    <div
+                        style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #bae6fd; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; min-height: 380px;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 56px; height: 56px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-symbols-outlined"
+                                    style="color: white; font-size: 28px;">edit_document</span>
+                            </div>
+                            <h4
+                                style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.2rem; font-weight: 900; margin: 0; color: var(--deep-charcoal); text-transform: uppercase;">
+                                Notary Public
+                            </h4>
+                        </div>
+                        <p style="font-size: 0.95rem; color: #1f2937; margin: 0 0 1.5rem 0; line-height: 1.6;">
+                            On-site commissioned Notary Public available for all legal and business documents. Walk-ins
+                            are always welcome, though appointments are recommended for expedited service.
+                        </p>
+                        <div style="flex-grow: 1;">
+                            <h5
+                                style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-blue); margin-bottom: 0.75rem; letter-spacing: 0.05em;">
+                                Specialized Services</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #4b5563;">
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Certified Loan Signing:</strong> Expert handling of complex real estate and
+                                    mortgage closing packages.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Mobile Notary:</strong> Professional on-site service dispatched directly to
+                                    your home, office, or hospital.
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <button onclick="openBookingModal('notary', 'Notary Public')"
+                                style="background: none; border: none; padding: 0; color: var(--primary-blue); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                Book Appointment <span class="material-symbols-outlined"
+                                    style="font-size: 1.2rem;">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Accredited Live Scan Submissions -->
+                    <div
+                        style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #bae6fd; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; min-height: 480px; position: relative;">
+
+                        <!-- Certifix Live Scan Logo -->
+                        <div
+                            style="position: absolute; top: 1.5rem; right: 1.5rem; background: var(--white); border: 2px solid #003DA7; border-radius: 6px; padding: 6px 12px; display: flex; align-items: center; box-shadow: 0 4px 10px rgba(0, 61, 167, 0.1);">
+                            <div style="display: flex; flex-direction: column; line-height: 1.1; text-align: left;">
+                                <span
+                                    style="font-size: 0.85rem; font-weight: 900; color: #003DA7; letter-spacing: -0.02em;">CERTIFIX</span>
+                                <span
+                                    style="font-size: 0.55rem; font-weight: 700; color: #6BAAD0; text-transform: uppercase;">LIVE
+                                    SCAN</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 56px; height: 56px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-symbols-outlined"
+                                    style="color: white; font-size: 28px;">fingerprint</span>
+                            </div>
+                            <h4
+                                style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.2rem; font-weight: 900; margin: 0; color: var(--deep-charcoal); text-transform: uppercase;">
+                                Accredited Live Scan Submissions
+                            </h4>
+                        </div>
+                        <p style="font-size: 0.95rem; color: #1f2937; margin: 0 0 1.5rem 0; line-height: 1.6;">
+                            Secure, electronic fingerprinting for California Department of Justice (DOJ) and FBI
+                            background checks. We provide high-speed, accurate biometric capturing essential for
+                            employment, professional licensing, and legal certifications.
+                        </p>
+                        <div style="flex-grow: 1;">
+                            <h5
+                                style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-blue); margin-bottom: 0.75rem; letter-spacing: 0.05em;">
+                                Authorized Certifix Live Scan Provider</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #4b5563;">
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Rapid Processing:</strong> Digital submission via the Certifix Live Scan
+                                    network ensures the fastest possible turnaround for results.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Comprehensive Compliance:</strong> Fully accredited for all state and
+                                    federal requirements (VCA, ATD, Licensing).
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Mobile Solutions:</strong> Group on-site fingerprinting available for
+                                    corporate offices and organizations.
+                                </li>
+                            </ul>
+
+                            <!-- Documentation Nudge -->
+                            <div
+                                style="margin-top: 1.5rem; padding: 1rem; background: rgba(0, 61, 167, 0.05); border-radius: 8px; border: 1px dashed var(--primary-blue);">
+                                <p
+                                    style="font-size: 0.8rem; color: var(--primary-blue); font-weight: 700; margin: 0; display: flex; align-items: flex-start; gap: 0.5rem;">
+                                    <span class="material-symbols-outlined" style="font-size: 1rem;">info</span>
+                                    <span>Please bring your "Request for Live Scan Service" form and a valid
+                                        government-issued photo ID.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <button onclick="openBookingModal('live-scan', 'Accredited Live Scan')"
+                                style="background: none; border: none; padding: 0; color: var(--primary-blue); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                Schedule Scan <span class="material-symbols-outlined"
+                                    style="font-size: 1.2rem;">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Passport & Photo Services -->
+                    <div
+                        style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #bae6fd; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; min-height: 380px;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 56px; height: 56px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-symbols-outlined"
+                                    style="color: white; font-size: 28px;">photo_camera</span>
+                            </div>
+                            <h4
+                                style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.2rem; font-weight: 900; margin: 0; color: var(--deep-charcoal); text-transform: uppercase;">
+                                Passport & ID Photo Services
+                            </h4>
+                        </div>
+                        <p style="font-size: 0.95rem; color: #1f2937; margin: 0 0 1.5rem 0; line-height: 1.6;">
+                            Professional, high-precision photography for Passports, Visas, and State ID cards. We
+                            utilize advanced lighting and biometric framing to ensure 100% compliance with strict
+                            government standards for over 80 countries.
+                        </p>
+                        <div style="flex-grow: 1;">
+                            <h5
+                                style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-blue); margin-bottom: 0.75rem; letter-spacing: 0.05em;">
+                                The Guarantee</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #4b5563;">
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Instant Processing:</strong> Ready in 10 minutes or less. No appointments
+                                    necessary.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Global Compliance:</strong> Custom sizing for International Passports,
+                                    Canadian
+                                    Visas, and European "Blue Card" requirements.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Digital & Physical:</strong> Receive physical gloss prints and an optional
+                                    digital copy for online application uploads.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>The Promise:</strong> If your photo is rejected by the issuing agency for
+                                    any
+                                    technical reason, we will reshoot it at no cost.
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <span
+                                style="color: var(--text-muted); font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Walk-ins
+                                Welcome</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Secure Document Handling -->
+            <div>
+                <h3
+                    style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.5rem; font-weight: 800; text-transform: uppercase; color: var(--deep-charcoal); margin-bottom: 2.5rem; text-align: center;">
+                    Secure Document Handling
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <!-- Card 4: Secure Shredding -->
+                    <div
+                        style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #bae6fd; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; min-height: 380px;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 56px; height: 56px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-symbols-outlined"
+                                    style="color: white; font-size: 28px;">delete_forever</span>
+                            </div>
+                            <h4
+                                style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.2rem; font-weight: 900; margin: 0; color: var(--deep-charcoal); text-transform: uppercase;">
+                                Secure Shredding
+                            </h4>
+                        </div>
+                        <p style="font-size: 0.95rem; color: #1f2937; margin: 0 0 1.5rem 0; line-height: 1.6;">
+                            Professional-grade bulk shredding for sensitive records. Choose our <strong>Standard
+                                Service</strong> for secure batch processing, or upgrade to our <strong>While-You-Wait
+                                Premium Service</strong>. Watch your documents be destroyed in real-time via our
+                            industrial
+                            on-site shredder for total peace of mind and verified disposal.
+                        </p>
+                        <div style="flex-grow: 1;">
+                            <h5
+                                style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-blue); margin-bottom: 0.75rem; letter-spacing: 0.05em;">
+                                Service Enhancements</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #4b5563;">
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Volume Discounts:</strong> Tiered weight-based pricing for bulk cleanouts.
+                                    The
+                                    more you shred, the more you save.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Mobile Pick-Up:</strong> Secure courier pick-up services for businesses and
+                                    residential offices.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Recurring Shredding:</strong> Scheduled weekly or monthly bin swaps for
+                                    ongoing
+                                    security management.
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <button onclick="openBookingModal('shredding', 'Secure Shredding')"
+                                style="background: none; border: none; padding: 0; color: var(--primary-blue); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                Book Shredding <span class="material-symbols-outlined"
+                                    style="font-size: 1.2rem;">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Document Preservation & Digitization -->
+                    <div
+                        style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 2px solid #bae6fd; border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; min-height: 380px;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 56px; height: 56px; background: var(--primary-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-symbols-outlined"
+                                    style="color: white; font-size: 28px;">scanner</span>
+                            </div>
+                            <h4
+                                style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.2rem; font-weight: 900; margin: 0; color: var(--deep-charcoal); text-transform: uppercase;">
+                                Document Preservation & Digitization
+                            </h4>
+                        </div>
+                        <p style="font-size: 0.95rem; color: #1f2937; margin: 0 0 1.5rem 0; line-height: 1.6;">
+                            <strong>Physical-to-Digital: Professional Archiving.</strong> High-speed optical scanning
+                            and high-resolution imaging for every scale. From standard legal and medical records to
+                            complex bulk archives, we convert physical assets into searchable, secure digital formats
+                            ensuring both longevity and instant accessibility.
+                        </p>
+                        <div style="flex-grow: 1;">
+                            <h5
+                                style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-blue); margin-bottom: 0.75rem; letter-spacing: 0.05em;">
+                                Specialized Scanning Capabilities</h5>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: #4b5563;">
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Large Format & Blueprints:</strong> Precision scanning for architectural
+                                    drawings, engineering schematics, and oversized documents up to 36" inches.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Artwork & Fine Art Imaging:</strong> High-fidelity color reproduction for
+                                    paintings, sketches, and photographs, capturing every texture and hue with
+                                    gallery-grade accuracy.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Archival & Heritage Preservation:</strong> Delicate handling for historical
+                                    documents, fragile manuscripts, and vintage family photo collections.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>B&W & Full-Color Optimization:</strong> Advanced image processing to enhance
+                                    legibility on faded black-and-white records or vibrant, true-to-life color.
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <span
+                                style="color: var(--text-muted); font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Bulk
+                                Digitization Available</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Identity & Authority Pillar -->
+                    <div
+                        style="background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border: 2px solid var(--primary-blue); border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; min-height: 420px; box-shadow: 0 10px 25px rgba(0, 98, 255, 0.2);">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div
+                                style="width: 56px; height: 56px; background: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <span class="material-symbols-outlined"
+                                    style="color: var(--primary-blue); font-size: 28px;">business</span>
+                            </div>
+                            <h4
+                                style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.2rem; font-weight: 900; margin: 0; color: var(--white); text-transform: uppercase;">
+                                Establish Your National Presence
+                            </h4>
+                        </div>
+                        <p
+                            style="font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0 0 1.5rem 0; line-height: 1.6;">
+                            <strong>Identity & Authority:</strong> Protect your private residence and professionalize
+                            your operations with a permanent, legal business street address. Position your brand within
+                            our Tier-1 facility to secure entity registration, build corporate authority, and ensure
+                            absolute privacy for your executive team.
+                        </p>
+                        <div style="flex-grow: 1;">
+                            <h5
+                                style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; color: var(--primary-blue); margin-bottom: 0.75rem; letter-spacing: 0.05em;">
+                                Strategic Advantages</h5>
+                            <ul
+                                style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Entity Registration:</strong> A 100% compliant physical street address for
+                                    LLC,
+                                    Corp, and Partnership filings—no PO Box limitations.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Privacy Shield:</strong> Maintain a clean separation between your home life
+                                    and
+                                    public business records.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Authority & Trust:</strong> A prestigious commercial address that passes
+                                    "Know
+                                    Your Customer" (KYC) banking and credit requirements.
+                                </li>
+                                <li style="margin-bottom: 0.75rem; line-height: 1.4;">
+                                    <strong>Global Accessibility:</strong> Manage your physical mail from anywhere in
+                                    the
+                                    world through our secure digital ecosystem.
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="mailboxes.html"
+                                style="display: block; width: 100%; padding: 0.75rem; background: var(--primary-blue); color: var(--white); text-align: center; border-radius: 8px; font-weight: 800; font-size: 0.9rem; text-transform: uppercase; text-decoration: none; transition: all 0.2s;"
+                                onmouseover="this.style.filter='brightness(1.1)'; this.style.transform='translateY(-2px)';"
+                                onmouseout="this.style.filter='none'; this.style.transform='translateY(0)';">
+                                Go to Mailbox Center
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Dynamic Booking Modal -->
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalServiceName">Service Appointment</h2>
+                <button class="close-modal" onclick="closeBookingModal()">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Step 1: Select Type -->
+                <div id="step1">
+                    <div class="step-title">
+                        <span class="material-symbols-outlined">settings_suggest</span>
+                        How would you like to proceed?
+                    </div>
+                    <div class="type-selector">
+                        <button class="type-btn" onclick="selectBookingType('in-store')">
+                            <span class="material-symbols-outlined">store</span>
+                            <strong>In-Store</strong>
+                            <small>Goleta Location</small>
+                        </button>
+                        <button class="type-btn" onclick="selectBookingType('mobile')">
+                            <span class="material-symbols-outlined">local_shipping</span>
+                            <strong>Mobile Service</strong>
+                            <small>On-Site Dispatch</small>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 2: In-Store Details -->
+                <div id="stepInStore" style="display: none;">
+                    <div class="store-info-pane">
+                        <div class="step-title" style="justify-content: center;">
+                            <span class="material-symbols-outlined">schedule</span>
+                            Direct In-Store Booking
+                        </div>
+                        <p style="font-size: 0.95rem; color: #4b5563; margin-bottom: 2rem; line-height: 1.6;">
+                            Visit us at our Hollister Ave storefront. <strong>Walk-ins welcome</strong> during business
+                            hours, but booking below guarantees priority handling.
+                        </p>
+
+                        <div
+                            style="background: #f8fafc; padding: 20px; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #e2e8f0;">
+                            <div
+                                style="font-size: 0.75rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 10px;">
+                                Status</div>
+                            <div id="modal-status-text" style="font-weight: 800; color: var(--emerald);">OPEN NOW</div>
+                            <div style="font-size: 0.85rem; margin-top: 8px;">M-F 9:00 AM - 5:00 PM</div>
+                            <div style="font-size: 0.85rem;">SAT 11:00 AM - 2:00 PM</div>
+                        </div>
+
+                        <a id="btnInStoreCal" href="#" target="_blank" class="btn-confirm"
+                            style="display: block; text-decoration: none; margin-bottom: 12px; text-align: center;">
+                            BOOK IN-STORE TIME
+                        </a>
+                        <p style="font-size: 0.75rem; color: #94a3b8;">Call for immediate availability:
+                            <strong>805-685-2277</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2: Mobile Intake Form -->
+                <div id="stepMobile" style="display: none;">
+                    <div class="step-title">
+                        <span class="material-symbols-outlined">file_open</span>
+                        Mobile Logistics Intake
+                    </div>
+                    <form class="booking-form" id="mobileForm">
+                        <div class="form-group">
+                            <label>Service Address</label>
+                            <input type="text" placeholder="Street, Suite, City (Santa Barbara County)" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Requested Window</label>
+                            <input type="text" placeholder="e.g., Tomorrow morning or Friday 3pm">
+                        </div>
+
+                        <!-- Dynamic Fields -->
+                        <div id="dynamicFields"></div>
+
+                        <div class="disclaimer-box">
+                            <p><strong>Review & Confirm:</strong> This request is <strong>Pending Staffing
+                                    Confirmation</strong>. Mobile services require a 2nd-person staffing adjustment or
+                                after-hours scheduling.</p>
+                            <p style="margin-top: 10px; font-size: 0.75rem; opacity: 0.9;">Your request will be reviewed
+                                for logistics (stairs, distance, volume) and a final confirmation/quote will be sent.
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn-confirm">SUBMIT MOBILE REQUEST</button>
+
+                        <p class="policy-note">To maintain our storefront operations, mobile services are typically
+                            scheduled before/after standard business hours or require a 48-hour lead time for staffing
+                            coverage.</p>
+                    </form>
+                </div>
+
+                <!-- Step 3: Success -->
+                <div id="stepSuccess" style="display: none; text-align: center;">
+                    <div style="color: #10b981; margin-bottom: 20px;">
+                        <span class="material-symbols-outlined" style="font-size: 4rem;">check_circle</span>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 800; text-transform: uppercase;">Request Submitted</h3>
+                    <p style="font-size: 0.95rem; color: #4b5563; margin-top: 12px; line-height: 1.6;">
+                        Our dispatch coordinator will review your logistics and staffing requirements. A formal quote
+                        and confirmation will be sent to your email.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 CopyRight Systems • Goleta, CA • Powered by Neural Cat AI
+    </footer>
+
+    <script>
+        let currentServiceId = '';
+        let currentServiceName = '';
+
+        function updateStoreStatus() {
+            const statusText = document.getElementById('store-status-text');
+            const statusDot = document.getElementById('store-status-dot');
+            const modalStatusText = document.getElementById('modal-status-text');
+            if (!statusText || !statusDot) return;
+
+            const now = new Date();
+            const goletaTime = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/Los_Angeles',
+                hour12: false,
+                weekday: 'short',
+                hour: 'numeric',
+                minute: 'numeric'
+            }).formatToParts(now);
+
+            const day = goletaTime.find(p => p.type === 'weekday').value;
+            const hour = parseInt(goletaTime.find(p => p.type === 'hour').value);
+            const minute = parseInt(goletaTime.find(p => p.type === 'minute').value);
+            const totalMinutes = hour * 60 + minute;
+
+            let isOpen = false;
+
+            if (['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].includes(day)) {
+                if (totalMinutes >= 540 && totalMinutes < 1020) isOpen = true;
+            } else if (day === 'Sat') {
+                if (totalMinutes >= 660 && totalMinutes < 840) isOpen = true;
+            }
+
+            if (isOpen) {
+                statusText.style.color = '#10B981'; // Emerald Green
+                statusText.innerHTML = 'OPEN';
+                statusDot.className = 'dot-glow';
+                statusDot.style.background = '#10B981';
+            } else {
+                statusText.style.color = '#EF4444'; // Red
+                statusText.innerHTML = 'CLOSED';
+                statusDot.className = '';
+                statusDot.style.background = '#EF4444';
+            }
+
+            if (modalStatusText) {
+                modalStatusText.innerText = isOpen ? 'OPEN' : 'CLOSED';
+                modalStatusText.style.color = isOpen ? '#10B981' : '#EF4444';
+            }
+        }
+
+        function openBookingModal(serviceId, serviceName) {
+            currentServiceId = serviceId;
+            currentServiceName = serviceName;
+            document.getElementById('modalServiceName').innerText = serviceName;
+
+            // Reset modal steps
+            document.getElementById('step1').style.display = 'block';
+            document.getElementById('stepInStore').style.display = 'none';
+            document.getElementById('stepMobile').style.display = 'none';
+            document.getElementById('stepSuccess').style.display = 'none';
+
+            document.getElementById('bookingModal').style.display = 'flex';
+            updateStoreStatus();
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        function selectBookingType(type) {
+            document.getElementById('step1').style.display = 'none';
+
+            if (type === 'in-store') {
+                const calLink = document.getElementById('btnInStoreCal');
+                let url = 'https://cal.com/phebe-mansur-s4ynzd/notary';
+                if (currentServiceId === 'live-scan') url = 'https://cal.com/phebe-mansur-s4ynzd/live-scan';
+                if (currentServiceId === 'shredding') url = 'https://cal.com/phebe-mansur-s4ynzd/shred-while-you-wait';
+                calLink.href = url;
+                document.getElementById('stepInStore').style.display = 'block';
+            } else {
+                setupMobileForm();
+                document.getElementById('stepMobile').style.display = 'block';
+            }
+        }
+
+        function setupMobileForm() {
+            const container = document.getElementById('dynamicFields');
+            container.innerHTML = ''; // Clear previous
+
+            if (currentServiceId === 'shredding') {
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>Number of Boxes</label>
+                        <input type="number" placeholder="Estimated box count" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Access Conditions</label>
+                        <select required>
+                            <option value="">Select building type...</option>
+                            <option value="stairs">Stairs Only</option>
+                            <option value="elevator">Elevator Available</option>
+                            <option value="ground">Ground Floor / Garage</option>
+                        </select>
+                    </div>
+                `;
+            } else if (currentServiceId === 'notary') {
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>Number of Signers</label>
+                        <input type="number" value="1" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Type of Document</label>
+                        <select required>
+                            <option value="general">General Notary Act</option>
+                            <option value="loan">Real Estate / Loan Package</option>
+                            <option value="trust">Estate / Trust Documents</option>
+                        </select>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="form-group">
+                        <label>Number of Individuals</label>
+                        <input type="number" value="1" min="1" required>
+                    </div>
+                `;
+            }
+        }
+
+        document.getElementById('mobileForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            document.getElementById('stepMobile').style.display = 'none';
+            document.getElementById('stepSuccess').style.display = 'block';
+        });
+
+        // Close on overlay click
+        window.addEventListener('click', (e) => {
+            if (e.target.id === 'bookingModal') closeBookingModal();
+        });
+    </script>
+
+
+    <script>
+
+        updateStoreStatus();
+        setInterval(updateStoreStatus, 60000);
+    </script>
+
+    <!-- TRACKING MODAL OVERLAY -->
+    <div id="trackingOverlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center;">
+        <div
+            style="background: #111; border: 1px solid #d4af37; padding: 40px; border-radius: 20px; text-align: center; max-width: 400px; width: 90%; position: relative; box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);">
+            <button onclick="toggleTrackingModal()"
+                style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #666; cursor: pointer; font-size: 1.2rem;">✕</button>
+
+            <h2
+                style="color: #d4af37; margin: 0 0 20px 0; font-family: 'Libre Baskerville', serif; text-transform: uppercase; font-size: 1.5rem;">
+                Track Package</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">Enter your tracking number below</p>
+
+            <input type="text" id="trackNum" placeholder="Tracking Number..."
+                style="width: 100%; padding: 15px; background: #222; border: 1px solid #333; color: white; border-radius: 8px; margin-bottom: 20px; font-family: 'Inter', sans-serif; font-size: 1rem; box-sizing: border-box; text-align: center; letter-spacing: 1px;">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                <button onclick="routeTracking('UPS')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">UPS</button>
+                <button onclick="routeTracking('FEDEX')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">FedEx</button>
+                <button onclick="routeTracking('DHL')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">DHL</button>
+                <button onclick="routeTracking('USPS')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">USPS</button>
+            </div>
+
+            <button onclick="autoDetect()"
+                style="width: 100%; padding: 15px; background: #d4af37; color: #000; border: none; border-radius: 8px; font-weight: 900; cursor: pointer; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);"
+                onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">TRACK
+                NOW</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleTrackingModal() {
+            const modal = document.getElementById('trackingOverlay');
+            if (modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            } else {
+                modal.style.display = 'flex';
+                setTimeout(() => { if (document.getElementById('trackNum')) document.getElementById('trackNum').focus(); }, 100);
+            }
+        }
+
+        function routeTracking(carrier) {
+            const num = document.getElementById('trackNum').value.trim();
+            if (!num) { alert('Please enter a tracking number.'); return; }
+            let url = '';
+            switch (carrier) {
+                case 'UPS': url = 'https://www.ups.com/track?tracknum=' + num; break;
+                case 'FEDEX': url = 'https://www.fedex.com/fedextrack/?trknbr=' + num; break;
+                case 'DHL': url = 'https://www.dhl.com/en/express/tracking.html?AWB=' + num; break;
+                case 'USPS': url = 'https://tools.usps.com/go/TrackConfirmAction?tLabels=' + num; break;
+            }
+            window.open(url, '_blank');
+        }
+
+        function autoDetect() {
+            const num = document.getElementById('trackNum').value.trim();
+            if (!num) { alert('Please enter a tracking number.'); return; }
+            window.open('https://parcelsapp.com/en/tracking/' + num, '_blank');
+        }
+
+        window.addEventListener('click', function (e) {
+            const modal = document.getElementById('trackingOverlay');
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+            // Existing booking modal and dropdown logic
+            if (e.target.id === 'bookingModal') closeBookingModal();
+            if (!e.target.closest('#bookBtn')) {
+                var d = document.getElementById("appointmentDropdown");
+                if (d) {
+                    d.style.display = "none";
+                    if (document.getElementById("btnArrow")) document.getElementById("btnArrow").innerHTML = "↓";
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

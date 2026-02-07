@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative & Publishing | CopyRight Systems</title>
+    <script src="navigation.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        :root {
+            --blue: #007bff;
+            --dark: #1a1a1a;
+            --green: #4ade80;
+            --primary-blue: #0062FF;
+            --deep-charcoal: #121212;
+            --white: #FFFFFF;
+            --emerald: #10B981;
+            --text-muted: #6B7280;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            padding: 40px 40px 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--primary-blue);
+        }
+
+        /* NAV */
+        nav {
+            background: white;
+            padding: 0 40px 0 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            /* Reduced gap for 8 items */
+            margin-left: -40px;
+        }
+
+        .nav-links a {
+            color: var(--deep-charcoal);
+            text-decoration: none;
+            font-size: 0.75rem;
+            /* Standardized size */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .site-search {
+            display: flex;
+            align-items: center;
+            background: #f3f4f6;
+            padding: 6px 15px;
+            border-radius: 100px;
+            border: 1px solid #e5e7eb;
+            width: 220px;
+            /* Limited to 220px as requested */
+            margin-left: auto;
+        }
+
+        .site-search input {
+            border: none;
+            background: transparent;
+            outline: none;
+            margin-left: 10px;
+            width: 100%;
+            font-size: 0.8rem;
+            color: var(--dark);
+            font-family: inherit;
+        }
+
+        .site-search .material-symbols-outlined {
+            color: #9ca3af;
+            font-size: 1.1rem;
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            height: 300px;
+            background: #222 url('./assets/copyright_staff_hero.png') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-overlay-mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: 1.76rem;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+        }
+
+        /* CREATIVE GRID */
+        .creative-grid {
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 5rem;
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 50;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 1024px) {
+            .creative-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .creative-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .creative-card {
+            background: var(--white);
+            border: 1px solid #eee;
+            border-radius: 10px;
+            /* Slightly tighter radius */
+            padding: 1rem 1.25rem;
+            /* Reduced from 1.25rem 1.5rem */
+            transition: 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* Removed space-between to stick content together */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+
+
+        .creative-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .card-icon-round {
+            width: 40px;
+            /* Reduced from 46px */
+            height: 40px;
+            background: #F0F7FF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            margin-bottom: 0.4rem;
+            /* Tightened */
+        }
+
+        .card-icon-round .material-symbols-outlined {
+            font-size: 24px;
+        }
+
+        /* STICKY FOOTER */
+        .checkout-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--deep-charcoal);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 2000;
+        }
+
+        .progress-info {
+            flex: 1;
+        }
+
+        .progress-text {
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .price-value-box {
+            text-align: center;
+            flex: 1;
+        }
+
+        .price-label {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+        }
+
+        .price-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .btn-track {
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-track:hover {
+            background: #0056E0;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 80px;
+        }
+
+        /* STATUS GLOW ANIMATION */
+        @keyframes emerald-glow {
+            0% {
+                box-shadow: 0 0 4px #10B981, 0 0 10px rgba(16, 185, 129, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 12px #10B981, 0 0 20px rgba(16, 185, 129, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 0 4px #10B981, 0 0 10px rgba(16, 185, 129, 0.4);
+            }
+        }
+
+        .dot-glow {
+            animation: emerald-glow 2s infinite ease-in-out;
+            background-color: #10B981 !important;
+        }
+
+        /* AUTHOR STUDIO SECTION */
+        /* AUTHOR'S STUDIO - THE SIGNATURE DESK RESKIN */
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+        .authors-studio {
+            position: relative;
+            padding: 0;
+            /* Changed to accommodate top header */
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            /* Stack header and content */
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 750px;
+            /* Increased to fit new structure */
+            background: #0a0500;
+        }
+
+        .studio-glass-header {
+            position: relative;
+            z-index: 10;
+            width: fit-content;
+            max-width: 85%;
+            margin: 40px auto 40px;
+            background: rgba(245, 245, 220, 0.08);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(168, 118, 62, 0.3);
+            border-radius: 20px;
+            padding: 24px;
+            /* Symmetrical padding all around, reduced sides */
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0;
+            /* Removed fixed side padding to let box wrap content */
+        }
+
+        .glass-header-content h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 2.2rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin: 0 0 12px 0;
+            /* Reset margins for symmetry, tiny bottom gap */
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .glass-header-content p {
+            font-family: 'Georgia', serif;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
+            max-width: 650px;
+            margin: 0;
+        }
+
+        .authors-studio::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('./assets/win.png') right center/72% auto no-repeat;
+            z-index: 1;
+            opacity: 1;
+        }
+
+        .studio-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(245, 222, 179, 0.02) 0%, rgba(0, 0, 0, 0.8) 100%);
+            z-index: 2;
+        }
+
+        .studio-container {
+            position: relative;
+            z-index: 3;
+            width: fit-content;
+            max-width: 550px;
+            margin: 0 auto 0 5%;
+            padding: 0 20px;
+        }
+
+        .parchment-sheet {
+            background: #F5F5DC;
+            /* Antique Cream */
+            background-image: repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(0, 0, 0, 0.02) 31px), url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            padding: 20px 30px 30px 30px;
+            /* Reduced top padding */
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            width: fit-content;
+        }
+
+        /* Archival Photo Corners */
+        .photo-corner {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border: 1.5px solid #A8763E;
+            z-index: 5;
+        }
+
+        .pc-tl {
+            top: 6px;
+            left: 6px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .pc-tr {
+            top: 6px;
+            right: 6px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .pc-bl {
+            bottom: 6px;
+            left: 6px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .pc-br {
+            bottom: 6px;
+            right: 6px;
+            border-left: none;
+            border-top: none;
+        }
+
+        .studio-artifact-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 1.75rem;
+        }
+
+        .artifact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .artifact-item span {
+            color: #D4AF37;
+            /* Gold Line Icons */
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 18px;
+        }
+
+        .artifact-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1B261E;
+            letter-spacing: 0.01em;
+            line-height: 1.4;
+        }
+
+        .artifact-text strong {
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            color: #A8763E;
+            margin-bottom: 4px;
+            letter-spacing: 0.08em;
+        }
+
+        /* Solid Brass Desk Sign CTA */
+        .brass-desk-sign {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 14px;
+            /* Reduced */
+            padding: 8px 14px;
+            /* Reduced */
+            background: linear-gradient(135deg, #7d5a2d 0%, #c5a025 50%, #7d5a2d 100%);
+            color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            font-weight: 900;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 0.6rem;
+            /* Reduced */
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            border-bottom: 2px solid #4a351b;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .brass-desk-sign:hover {
+            transform: scale(1.02);
+            filter: contrast(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .brass-desk-sign::before {
+            content: "";
+            position: absolute;
+            inset: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 900px) {
+            .studio-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .studio-header {
+                font-size: 1.1rem;
+            }
+
+            .studio-narratve-ink {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="hero"
+        style="position: relative; height: 300px; display: flex; align-items: center; background: url('./assets/copyright_staff_hero.png') center/cover no-repeat; color: var(--white); overflow: visible; z-index: 3000;">
+
+        <!-- Lightened Overlay (30% opacity) -->
+        <div class="hero-overlay-mask"
+            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); z-index: 1;">
+        </div>
+
+        <!-- Rich Cat Logo - Moved behind Nav Bar -->
+        <img src="./assets/cr_logo_cat.png" alt="CopyRight Logo"
+            style="position: absolute; right: 40px; top: 170px; height: 100px; width: auto; opacity: 0.7; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); z-index: 9;">
+
+        <!-- Left-Aligned Hero Content -->
+        <div class="container"
+            style="position: relative; z-index: 100; width: 100%; max-width: none; padding: 0 40px; margin: 0; display: flex; flex-direction: column; align-items: center; height: 100%;">
+
+            <!-- Brand Logo Text (Non-Image) - Aligned to Home Page Style -->
+            <div style="position: absolute; left: 40px; top: 38px;">
+                <div
+                    style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.6rem; font-weight: 800; line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
+                    <span style="color: white;">COPYRIGHT</span><span style="color: #0062FF;">PRINTING</span>
+                </div>
+            </div>
+
+
+            <!-- Business Block (Absolute overlay - top: 95px) -->
+            <div class="business-block"
+                style="position: absolute; left: 40px; top: 95px; text-align: left; font-size: 0.75rem; font-weight: 500; line-height: 1.5; color: var(--white); text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                <!-- 1. Open Status -->
+                <div class="status-indicator"
+                    style="display: flex; align-items: center; gap: 0.6rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 0.2rem;">
+                    <div id="store-status-dot"
+                        style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444; border: 1px solid rgba(0,0,0,0.1); transition: all 0.3s; flex-shrink: 0;">
+                    </div>
+                    <span id="store-status-text"
+                        style="color: #EF4444; font-size: 1.1rem; line-height: 1;">CLOSED</span>
+                </div>
+                <!-- 2. Weekday Hours -->
+                <div>M-F 9:00 AM - 5:00 PM</div>
+                <!-- 3. Weekend Hours -->
+                <div>SAT 11:00 AM - 2:00 PM</div>
+                <!-- 4. Address Line 1 -->
+                <div style="margin-top: 0.4rem;">5708 Hollister Avenue</div>
+                <!-- 5. Location Note -->
+                <div style="font-style: italic; opacity: 0.9;">under the red awning</div>
+                <!-- 6. City/State -->
+                <div>Goleta CA 93117</div>
+                <!-- 7. Email -->
+                <div style="margin-top: 0.4rem;">
+                    <a href="mailto:orders@copyrightsb.com"
+                        style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">orders@copyrightsb.com</a>
+                </div>
+            </div>
+
+            <!-- Spacer with Hero Title (Lowered to Standard) -->
+            <div style="height: 64px; width: 100%; display: flex; align-items: flex-end; justify-content: center;">
+                <h1 class="hero-title"
+                    style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.76rem; margin: 0; font-weight: 800; text-align: center; width: 100%; line-height: 1; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); color: white;">
+                    GOLETA’S INDEPENDENT PUBLISHING HUB
+                </h1>
+            </div>
+
+            <!-- Action Buttons (Centered Stack) -->
+            <div
+                style="flex-grow: 1; display: flex; align-items: center; justify-content: center; width: 100%; position: relative;">
+                <div class="action-stack"
+                    style="display: flex; flex-direction: column; gap: 0.6rem; align-items: center; justify-content: center; margin-top: -5px; width: 100%;">
+
+                    <!-- 1. Track Package -->
+                    <button class="btn btn-track" onclick="toggleTrackingModal()"
+                        style="padding: 0.5rem; width: 280px; background-color: #0062FF; color: var(--white); border-radius: 14px; border: none; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;">
+                        <span style="font-weight: 800; font-size: 0.9rem;">TRACK PACKAGE</span>
+                        <span style="font-size: 0.65rem; opacity: 0.9; font-weight: 500;">UPS, FedEx, DHL, USPS</span>
+                    </button>
+
+                    <!-- 2. Start Copy Order -->
+                    <button class="btn btn-white" onclick="window.location.href='print.html'"
+                        style="padding: 0.5rem; width: 280px; height: 48px; background-color: var(--white); color: var(--deep-charcoal); border-radius: 14px; border: none; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s;">
+                        <span style="font-weight: 800; font-size: 0.9rem;">START COPY ORDER</span>
+                    </button>
+
+                    <!-- 3. Book Services (Dropdown) -->
+                    <div style="position: relative; display: inline-block;">
+                        <button onclick="toggleAppointmentMenu()" id="bookBtn"
+                            style="background: #d4af37; color: #000; padding: 0.5rem; width: 280px; border: none; font-weight: 800; text-transform: uppercase; cursor: pointer; border-radius: 14px; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; height: 48px;">
+                            BOOK A SERVICE <span id="btnArrow">↓</span>
+                        </button>
+
+                        <div id="appointmentDropdown"
+                            style="display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 650px; background: #1A1A1A; border: 1px solid #D4AF37; z-index: 999999 !important; box-shadow: 0 20px 50px rgba(0,0,0,0.9); border-radius: 12px; overflow: hidden; text-align: left; padding: 25px;">
+
+                            <div style="display: flex; gap: 20px; justify-content: space-between;">
+                                <!-- Pillar 1: IN-OFFICE -->
+                                <div
+                                    style="flex: 1; border-right: 1px solid rgba(212, 175, 55, 0.2); padding-right: 10px;">
+                                    <div
+                                        style="font-size: 0.75rem; font-weight: 900; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 4px;">
+                                        IN-OFFICE</div>
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/notary" target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Notary <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/live-scan" target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Live Scan <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/shred-while-you-wait"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Shred-While-You-Wait <span>→</span></a>
+                                    </div>
+                                </div>
+
+                                <!-- Pillar 2: MOBILE UNITS -->
+                                <div
+                                    style="flex: 1; border-right: 1px solid rgba(212, 175, 55, 0.2); padding-right: 10px;">
+                                    <div
+                                        style="font-size: 0.75rem; font-weight: 900; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 4px;">
+                                        MOBILE UNITS</div>
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/mobile-services-notary"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Mobile Notary <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/mobile-services-live-scan"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Mobile Live Scan <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/mobile-services-shredding"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Mobile Shredding <span>→</span></a>
+                                    </div>
+                                </div>
+
+                                <!-- Pillar 3: CREATIVE -->
+                                <div style="flex: 1;">
+                                    <div
+                                        style="font-size: 0.75rem; font-weight: 900; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 4px;">
+                                        CREATIVE</div>
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/graphic-design" target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Graphic & Web Design <span>→</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function toggleAppointmentMenu() {
+                    var d = document.getElementById("appointmentDropdown");
+                    var a = document.getElementById("btnArrow");
+                    var isHidden = (d.style.display === "none" || d.style.display === "");
+                    d.style.display = isHidden ? "block" : "none";
+                    a.innerHTML = isHidden ? "↑" : "↓";
+                }
+
+                window.onclick = function (e) {
+                    if (!e.target.closest('#bookBtn')) {
+                        var d = document.getElementById("appointmentDropdown");
+                        if (d) {
+                            d.style.display = "none";
+                            document.getElementById("btnArrow").innerHTML = "↓";
+                        }
+                    }
+                }
+            </script>
+        </div>
+
+        <!-- Neural Cat AI Bar -->
+        <div class="neural-cat-bar"
+            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.5rem 0; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(5px); z-index: 20; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="container" style="max-width: none; padding: 0 40px;">
+                <div class="neural-content" style="display: flex; align-items: center; justify-content: space-between;">
+                    <div class="neural-label"
+                        style="font-size: 0.7rem; letter-spacing: 0.2em; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.8rem;">
+                        <img src="./assets/neural_cat_logo.png" alt="Neural Cat AI" class="neural-icon-img"
+                            style="width: 18px; height: 18px;">
+                        POWERED BY NEURAL CAT AI
+                    </div>
+                    <div class="everytown-label"
+                        style="font-size: 0.7rem; letter-spacing: 0.2em; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.8rem;">
+                        SHOP EVERYTOWN
+                        <img src="./assets/shopeverytown-logo-white.png" alt="Shop EveryTown" class="everytown-icon-img"
+                            style="width: 18px; height: 18px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="shipping.html">Shipping</a>
+                <a href="mailboxes.html">Mailboxes</a>
+                <a href="print.html">Copy & Print</a>
+                <a href="legal.html">Legal</a>
+                <a href="ai-tools.html">AI Tools</a>
+                <a href="branding.html">Branding</a>
+                <a href="creative.html" style="color: #4ade80;">Creative & Publishing</a>
+                <a href="retail.html">Retail</a>
+            </div>
+            <div class="site-search">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Search services...">
+            </div>
+        </div>
+    </nav>
+
+    <main style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
+
+        <h2
+            style="font-weight: 900; text-transform: uppercase; font-size: 1.8rem; text-align: center; margin-top: 15px; margin-bottom: 30px; font-family: 'Segoe UI', Arial, sans-serif; color: #111;">
+            The Creative Strategy</h2>
+
+        <div style="text-align: center; margin-top: -20px; margin-bottom: 2rem;">
+            <a href="#author-studio"
+                style="font-size: 0.85rem; color: #64748b; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s;"
+                onmouseover="this.style.color='#d4af37'" onmouseout="this.style.color='#64748b'">
+                Looking for Professional Publishing? Go to The Author’s Studio ↓
+            </a>
+        </div>
+
+        <div class="creative-grid">
+            <!-- LEFT COLUMN: AGENCY & LOGISTICS STACK -->
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+                <!-- Card 1: Identity & Agency Portal -->
+                <div class="creative-card" onclick="scrollToQuote('[AGENCY-IDENTITY] Agency Project Start')">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+                            <div class="card-icon-round" style="margin-bottom: 0;">
+                                <span class="material-symbols-outlined">palette</span>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0; font-weight: 800; line-height: 1.2;">IDENTITY &
+                                AGENCY</h3>
+                        </div>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; text-align: left; margin-top: 1rem;">
+                            <div style="margin-bottom: 0.75rem;">
+                                <div
+                                    style="font-weight: 900; color: var(--primary-blue); font-size: 0.65rem; letter-spacing: 0.1em; margin-bottom: 0.25rem; text-transform: uppercase;">
+                                    WEB</div>
+                                <div style="margin-bottom: 0.2rem;"><strong>Identity:</strong> Custom logos, brand
+                                    guides, and professional stationery sets.</div>
+                                <div style="margin-bottom: 0.2rem;"><strong>Web Presence:</strong> Responsive,
+                                    SEO-optimized sites built for local growth.</div>
+                                <div><strong>E-Commerce:</strong> Secure storefronts and digital payment integration.
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    style="font-weight: 900; color: var(--primary-blue); font-size: 0.65rem; letter-spacing: 0.1em; margin-bottom: 0.25rem; text-transform: uppercase;">
+                                    PRINT</div>
+                                <div style="margin-bottom: 0.2rem;"><strong>Layout:</strong> Professional brochures,
+                                    menus, and marketing collateral.</div>
+                                <div style="margin-bottom: 0.2rem;"><strong>Ad Assets:</strong> High-performance
+                                    graphics for social media and digital ads.</div>
+                                <div><strong>Large Format:</strong> Signs, banners, and specialty window/vehicle decals.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bundle-action"
+                        style="margin-top: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: var(--primary-blue); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                        <span class="action-text">START PROJECT</span> <span class="material-symbols-outlined"
+                            style="font-size: 1.2rem;">add_circle</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Political & Phygital Logistics -->
+                <div class="creative-card" onclick="scrollToQuote('[AGENCY-POLITICAL] Campaign Logistics Inquiry')">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem;">
+                            <div class="card-icon-round" style="margin-bottom: 0;">
+                                <span class="material-symbols-outlined">qr_code_2</span>
+                            </div>
+                            <h3 style="font-size: 1.25rem; margin: 0; font-weight: 800; line-height: 1.2;">POLITICAL &
+                                PHYGITAL</h3>
+                        </div>
+                        <div
+                            style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; text-align: left; margin-top: 0.5rem;">
+                            <div style="margin-bottom: 0.5rem;"><strong>QR Integration:</strong> Dynamic tracking
+                                placeholders for all print assets.</div>
+                            <div style="margin-bottom: 0.5rem;"><strong>Yard Signs & Mailers:</strong> High-velocity
+                                local impact for campaigns.</div>
+                            <div style="margin-bottom: 0.5rem;"><strong>Legal Compliance:</strong> Verified disclaimers
+                                and compliant outreach data.</div>
+                            <div><strong>EDDM Strategy:</strong> Targeted Every Door Direct Mail for precision
+                                geofencing.</div>
+                        </div>
+                    </div>
+                    <div class="bundle-action"
+                        style="margin-top: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: var(--primary-blue); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                        <span class="action-text">START PROJECT</span> <span class="material-symbols-outlined"
+                            style="font-size: 1.2rem;">add_circle</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: THE ARTIST'S STUDIO -->
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+
+                <!-- Card 2: THE ARTIST’S STUDIO (Signature Service) -->
+                <div class="creative-card signature-studio"
+                    style="padding: 2rem; border-radius: 10px; border: 1px solid #eee; background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.05); height: 100%;">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 1.5rem;">
+                        <div class="card-icon-round" style="margin-bottom: 0; width: 50px; height: 50px;">
+                            <span class="material-symbols-outlined" style="font-size: 30px;">palette</span>
+                        </div>
+                        <h3
+                            style="font-size: 1.5rem; margin: 0; font-weight: 900; line-height: 1.2; letter-spacing: -0.01em;">
+                            THE ARTIST’S STUDIO</h3>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                            <img src="./assets/printed_canvas_showcase.png" alt="High-Res Giclee Canvas Wrap"
+                                style="width: 100%; border-radius: 8px; margin-bottom: 1.25rem; filter: contrast(1.05) saturate(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+
+                            <!-- New Greeting Card Showcase -->
+                            <img src="./assets/greeting_cards_showcase.png" alt="Custom Artist Greeting Cards"
+                                style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-top: auto; filter: contrast(1.05) saturate(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+
+                        </div>
+
+                        <div>
+                            <p
+                                style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+                                Precision color-critical scanning for canvas and portfolios. We bridge the gap between
+                                your physical originals and museum-grade digital assets. Our high-fidelity digitization
+                                ensures every brushstroke is captured with absolute fidelity.
+                            </p>
+
+                            <div
+                                style="background: rgba(0,98,255,0.03); border-left: 3px solid var(--primary-blue); padding: 1rem; margin-bottom: 1.5rem;">
+                                <div
+                                    style="font-weight: 800; font-size: 0.8rem; text-transform: uppercase; color: var(--primary-blue); letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                                    Fine Art Reproduction</div>
+                                <ul
+                                    style="font-size: 0.85rem; color: var(--deep-charcoal); padding-left: 1.2rem; margin: 0; line-height: 1.6;">
+                                    <li style="margin-bottom: 0.3rem;">Small/Large format Giclée printing.</li>
+                                    <li style="margin-bottom: 0.3rem;">Archival canvas wraps & gallery mounting.</li>
+                                    <li>Museum-quality paper stocks.</li>
+                                </ul>
+                            </div>
+
+                            <div
+                                style="background: rgba(168,118,62,0.05); border-left: 3px solid #d4af37; padding: 1rem;">
+                                <div
+                                    style="font-weight: 800; font-size: 0.8rem; text-transform: uppercase; color: #a8763e; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+                                    Boutique Reproductions</div>
+                                <ul
+                                    style="font-size: 0.85rem; color: var(--deep-charcoal); padding-left: 1.2rem; margin: 0; line-height: 1.6;">
+                                    <li style="margin-bottom: 0.3rem;">Custom Bookmarks & Author Note Cards</li>
+                                    <li>Postcards & Small Edition Artist Sets</li>
+                                </ul>
+                                <p
+                                    style="font-size: 0.75rem; color: #64748b; margin-top: 0.75rem; font-style: italic; line-height: 1.4;">
+                            </div>
+
+                            <!-- Relocated Buttons -->
+                            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+                                <a href="javascript:void(0)"
+                                    onclick="scrollToQuote('[AGENCY-ARTIST] Giclée & Scan Request')"
+                                    style="background: var(--primary-blue); color: white; border: none; padding: 1rem; border-radius: 8px; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; text-align: center; text-decoration: none; transition: 0.2s;"
+                                    onmouseover="this.style.background='#0056E0'"
+                                    onmouseout="this.style.background='var(--primary-blue)'">
+                                    DIGITIZE MY WORK
+                                </a>
+
+                                <a href="javascript:void(0)"
+                                    onclick="scrollToQuote('[STUDIO-VANITY] Artist Product Inquiry')"
+                                    style="background: #111; color: white; border: none; padding: 1rem; border-radius: 8px; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; text-align: center; text-decoration: none; transition: 0.2s;"
+                                    onmouseover="this.style.background='#333'"
+                                    onmouseout="this.style.background='#111'">
+                                    Artist Product Inquiry
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- The Author's Studio -->
+    <section class="authors-studio" id="author-studio" style="margin-top: 5rem;">
+        <div class="studio-overlay"></div>
+
+        <div class="studio-glass-header">
+            <div class="glass-header-content">
+                <h2>The Author's Studio</h2>
+                <p>We turn local authors into published professionals. Since 1996, we have provided the technical bridge
+                    between a raw document and a bookstore-quality physical book. Our studio manages the complex hurdles
+                    of perfect binding, interior curation, and distribution logistics so you can focus on the legacy of
+                    your words.</p>
+            </div>
+        </div>
+
+        <div class="studio-container">
+            <div class="parchment-sheet">
+                <!-- Archival Corners -->
+                <div class="photo-corner pc-tl"></div>
+                <div class="photo-corner pc-tr"></div>
+                <div class="photo-corner pc-bl"></div>
+                <div class="photo-corner pc-br"></div>
+                <div class="studio-artifacts">
+                    <ul class="studio-artifact-list">
+                        <li class="artifact-item">
+                            <span class="material-symbols-outlined">menu_book</span>
+                            <div class="artifact-text">
+                                <strong>Production Mastery</strong>
+                                Perfect-bound paperbacks and museum-grade hardcovers.
+                            </div>
+                        </li>
+                        <li class="artifact-item">
+                            <span class="material-symbols-outlined">format_shapes</span>
+                            <div class="artifact-text">
+                                <strong>Interior Curation</strong>
+                                Master-level typesetting and font selection.
+                            </div>
+                        </li>
+                        <li class="artifact-item">
+                            <span class="material-symbols-outlined">image</span>
+                            <div class="artifact-text">
+                                <strong>Spine Artistry</strong>
+                                Custom spine engineering and laminate finishing.
+                            </div>
+                        </li>
+                        <li class="artifact-item">
+                            <span class="material-symbols-outlined">public</span>
+                            <div class="artifact-text">
+                                <strong>Global Entry</strong>
+                                ISBN registration and distribution logistics.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="mailto:publish@copyrightsb.com" class="brass-desk-sign">SCHEDULE REVIEW</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split-Column Custom Quote Module -->
+    <section id="quote-form-section" style="max-width: 1300px; margin: 4rem auto; padding: 0 40px;">
+        <div style="display: grid; grid-template-columns: 6fr 4fr; gap: 3rem; align-items: stretch;">
+
+            <!-- Left Column: Visual/Marketing -->
+            <div
+                style="background: var(--white); border: 1px solid #E5E7EB; border-radius: 10px; padding: 2.5rem; display: flex; flex-direction: column;">
+                <div style="flex: 1;">
+                    <h2
+                        style="font-family: 'Segoe UI', sans-serif; font-weight: 900; font-size: 2rem; color: var(--deep-charcoal); margin-top: 1rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.1;">
+                        Precision Strategy. <br><span style="color: var(--primary-blue);">Exceptional Results.</span>
+                    </h2>
+
+                    <div
+                        style="font-size: 1rem; line-height: 1.6; color: #4B5563; font-family: 'Segoe UI', sans-serif;">
+                        <img src="./assets/brand_stationery_mockup.jpg" alt="Premium Brand Stationery Mockup"
+                            style="width: 280px; float: left; margin: 0 2rem 1.5rem 0; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); filter: sepia(0.2) saturate(1.2) brightness(1.05);">
+
+                        <p style="margin-bottom: 1.25rem;">
+                            Your vision deserves a partner who understands the bridge between digital strategy and
+                            physical production. Whether it's a campaign-defining political mailer or a museum-grade
+                            archival reproduction, we bring absolute precision to every pixel and print.
+                        </p>
+                        <p style="margin-bottom: 1.25rem;">
+                            Our creative department doesn't just "design"—we architect identities that endure. From
+                            SEO-optimized web foundations to large-format graphics that dominate the physical landscape,
+                            CopyRight Systems is your tactical headquarters for local growth.
+                        </p>
+                        <p
+                            style="font-weight: 800; color: var(--primary-blue); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            The intersection of art and logistics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Functional Form -->
+            <div
+                style="background: var(--white); border: 1px solid #E5E7EB; border-radius: 10px; padding: 3rem; box-shadow: 0 12px 40px rgba(0,0,0,0.12); border-top: 5px solid var(--primary-blue);">
+                <h3
+                    style="font-family: 'Segoe UI', sans-serif; font-weight: 900; font-size: 1.5rem; color: var(--deep-charcoal); margin: 0 0 2rem 0; text-transform: uppercase; letter-spacing: 0.05em;">
+                    Creative Project Intake
+                </h3>
+
+                <!-- Amber Disclaimer Box -->
+                <div
+                    style="background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 8px; padding: 1.25rem; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: flex-start;">
+                    <span class="material-symbols-outlined"
+                        style="color: #D97706; font-size: 24px; flex-shrink: 0;">warning</span>
+                    <p style="font-size: 0.8rem; color: #92400E; font-weight: 700; margin: 0; line-height: 1.5;">
+                        Custom creative projects require specialized review. <strong>NOTE: Orders requiring a quote will
+                            NOT be processed until approved and deposit paid; this typically adds 24-48 hours to your
+                            turnaround.</strong>
+                    </p>
+                </div>
+
+                <form id="creative-quote-form" style="display: grid; gap: 1.25rem;">
+                    <div>
+                        <label
+                            style="display: block; font-size: 0.75rem; font-weight: 900; text-transform: uppercase; color: #475569; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Project
+                            Description *</label>
+                        <textarea id="quote-project" required
+                            placeholder="e.g., Campaign Identity Bundle or Fine Art Digitization"
+                            style="width: 100%; border: 2px solid #F1F5F9; border-radius: 8px; padding: 1rem; font-size: 0.9rem; min-height: 100px; font-family: inherit; transition: border-color 0.2s;"
+                            onfocus="this.style.borderColor='var(--primary-blue)'; this.style.outline='none'"
+                            onblur="this.style.borderColor='#F1F5F9'"></textarea>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+                        <div>
+                            <label
+                                style="display: block; font-size: 0.75rem; font-weight: 900; text-transform: uppercase; color: #475569; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Quantity</label>
+                            <input type="number" id="quote-qty" min="1" placeholder="e.g., 500"
+                                style="width: 100%; border: 2px solid #F1F5F9; border-radius: 8px; padding: 1rem; font-size: 0.9rem; font-family: inherit;">
+                        </div>
+                        <div>
+                            <label
+                                style="display: block; font-size: 0.75rem; font-weight: 900; text-transform: uppercase; color: #475569; margin-bottom: 0.5rem; letter-spacing: 0.05em;">Deadline</label>
+                            <input type="date" id="quote-deadline"
+                                style="width: 100%; border: 2px solid #F1F5F9; border-radius: 8px; padding: 1rem; font-size: 0.9rem; font-family: inherit;">
+                        </div>
+                    </div>
+
+                    <div style="background: #F8FAFC; border-radius: 8px; padding: 1rem; margin-top: 0.5rem;">
+                        <button type="button"
+                            onclick="window.open('https://spaces.hightail.com/space/iYWqhG9d3k', '_blank')"
+                            style="width: 100%; border: 2px dashed #CBD5E1; border-radius: 8px; padding: 1rem; font-size: 0.85rem; font-weight: 800; color: #64748B; background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.75rem; transition: all 0.2s;"
+                            onmouseover="this.style.borderColor='var(--primary-blue)'; this.style.color='var(--primary-blue)';"
+                            onmouseout="this.style.borderColor='#CBD5E1'; this.style.color='#64748B';">
+                            <span class="material-symbols-outlined">cloud_upload</span>
+                            UPLOAD SOURCE FILES
+                        </button>
+                    </div>
+
+                    <button type="submit"
+                        style="margin-top: 1rem; width: 100%; background: var(--primary-blue); color: #fff; border: none; border-radius: 10px; padding: 1.25rem; font-weight: 900; text-transform: uppercase; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 0.75rem; letter-spacing: 0.1em; transition: all 0.3s; box-shadow: 0 4px 20px rgba(0,98,255,0.4);"
+                        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 30px rgba(0,98,255,0.5)';"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0,98,255,0.4)';">
+                        Submit for Tactical Review
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        &copy; 2026 CopyRight Systems • Goleta, CA • Powered by Neural Cat AI
+    </footer>
+
+    <script>
+        function toggleOption(id, el) {
+            // Deprecated in favor of direct scroll-to-quote logic
+            return;
+        }
+
+        function scrollToQuote(subject) {
+            const section = document.getElementById('quote-form-section');
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const field = document.getElementById('quote-project');
+                if (field) {
+                    field.value = subject + ": ";
+                    setTimeout(() => {
+                        field.focus();
+                    }, 500);
+                }
+            }
+        }
+
+        // Quote form submission handler
+        const creativeForm = document.getElementById('creative-quote-form');
+        if (creativeForm) {
+            creativeForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                alert('Project details captured. A specialist from our creative strategy team will contact you within 24 hours to finalize your tactical plan and provide a formal quote.');
+                this.reset();
+            });
+        }
+    </script>
+
+    <!-- TRACKING MODAL OVERLAY -->
+    <div id="trackingOverlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center;">
+        <div
+            style="background: #111; border: 1px solid #d4af37; padding: 40px; border-radius: 20px; text-align: center; max-width: 400px; width: 90%; position: relative; box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);">
+            <button onclick="toggleTrackingModal()"
+                style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #666; cursor: pointer; font-size: 1.2rem;">✕</button>
+
+            <h2
+                style="color: #d4af37; margin: 0 0 20px 0; font-family: 'Libre Baskerville', serif; text-transform: uppercase; font-size: 1.5rem;">
+                Track Package</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">Enter your tracking number below</p>
+
+            <input type="text" id="trackNum" placeholder="Tracking Number..."
+                style="width: 100%; padding: 15px; background: #222; border: 1px solid #333; color: white; border-radius: 8px; margin-bottom: 20px; font-family: 'Inter', sans-serif; font-size: 1rem; box-sizing: border-box; text-align: center; letter-spacing: 1px;">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                <button onclick="routeTracking('UPS')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">UPS</button>
+                <button onclick="routeTracking('FEDEX')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">FedEx</button>
+                <button onclick="routeTracking('DHL')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">DHL</button>
+                <button onclick="routeTracking('USPS')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">USPS</button>
+            </div>
+
+            <button onclick="autoDetect()"
+                style="width: 100%; padding: 15px; background: #d4af37; color: #000; border: none; border-radius: 8px; font-weight: 900; cursor: pointer; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);"
+                onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">TRACK
+                NOW</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleTrackingModal() {
+            const modal = document.getElementById('trackingOverlay');
+            if (modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            } else {
+                modal.style.display = 'flex';
+                setTimeout(() => { if (document.getElementById('trackNum')) document.getElementById('trackNum').focus(); }, 100);
+            }
+        }
+
+        window.onclick = function (e) {
+            const modal = document.getElementById('trackingOverlay');
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+            // For custom dropdown in hero
+            if (!e.target.closest('#bookBtn')) {
+                var d = document.getElementById("appointmentDropdown");
+                if (d) {
+                    d.style.display = "none";
+                    if (document.getElementById("btnArrow")) document.getElementById("btnArrow").innerHTML = "↓";
+                }
+            }
+        };
+
+        function routeTracking(carrier) {
+            const num = document.getElementById('trackNum').value.trim();
+            if (!num) { alert('Please enter a tracking number.'); return; }
+            let url = '';
+            switch (carrier) {
+                case 'UPS': url = 'https://www.ups.com/track?tracknum=' + num; break;
+                case 'FEDEX': url = 'https://www.fedex.com/fedextrack/?trknbr=' + num; break;
+                case 'DHL': url = 'https://www.dhl.com/en/express/tracking.html?AWB=' + num; break;
+                case 'USPS': url = 'https://tools.usps.com/go/TrackConfirmAction?tLabels=' + num; break;
+            }
+            window.open(url, '_blank');
+        }
+
+        function autoDetect() {
+            const num = document.getElementById('trackNum').value.trim();
+            if (!num) { alert('Please enter a tracking number.'); return; }
+            window.open('https://parcelsapp.com/en/tracking/' + num, '_blank');
+        }
+
+        function updateStoreStatus() {
+            const statusText = document.getElementById('store-status-text');
+            const statusDot = document.getElementById('store-status-dot');
+            if (!statusText || !statusDot) return;
+
+            const now = new Date();
+            const goletaTime = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/Los_Angeles',
+                hour12: false,
+                weekday: 'short',
+                hour: 'numeric',
+                minute: 'numeric'
+            }).formatToParts(now);
+
+            const day = goletaTime.find(p => p.type === 'weekday').value;
+            const hour = parseInt(goletaTime.find(p => p.type === 'hour').value);
+            const minute = parseInt(goletaTime.find(p => p.type === 'minute').value);
+            const totalMinutes = hour * 60 + minute;
+
+            let isOpen = false;
+
+            if (['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].includes(day)) {
+                if (totalMinutes >= 540 && totalMinutes < 1020) isOpen = true;
+            } else if (day === 'Sat') {
+                if (totalMinutes >= 660 && totalMinutes < 840) isOpen = true;
+            }
+
+            if (isOpen) {
+                statusText.style.color = '#10B981'; // Emerald Green
+                statusText.innerHTML = 'OPEN';
+                statusDot.className = 'dot-glow';
+                statusDot.style.background = '#10B981';
+            } else {
+                statusText.style.color = '#EF4444'; // Red
+                statusText.innerHTML = 'CLOSED';
+                statusDot.className = '';
+                statusDot.style.background = '#EF4444';
+            }
+        }
+        updateStoreStatus();
+        setInterval(updateStoreStatus, 60000);
+    </script>
+</body>
+
+</html>

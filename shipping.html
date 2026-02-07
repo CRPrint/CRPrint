@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping & Global Logistics | CopyRight Systems</title>
+    <script src="navigation.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        /* INTERIOR PAGE LAYOUT - THE BLUEPRINT */
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        .blueprint-section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .blueprint-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .blueprint-header {
+            text-align: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+            color: #111;
+            margin: 0 0 60px 0;
+        }
+
+        .blueprint-columns {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
+            /* align-items: start; Removed to allow stretch */
+        }
+
+        /* The Strategy (Left Column) */
+        .strategy-block {
+            background: #f8fafc;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-blue);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .strategy-block h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--primary-blue);
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .strategy-block p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* The Menu (Right Column) */
+        .menu-block {
+            padding-top: 20px;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+        }
+
+        .menu-item span {
+            color: var(--primary-blue) !important;
+            font-size: 32px;
+            margin-top: 4px;
+        }
+
+        .menu-item strong {
+            color: #111;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .menu-item div {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #4b5563;
+        }
+
+        /* Bronze Plaque CTA */
+        .blueprint-btn {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 18px 40px;
+            background: var(--primary-blue);
+            color: white;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 100px;
+            box-shadow: 0 4px 12px rgba(0, 98, 255, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .blueprint-btn:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        @media(max-width: 1100px) {
+            .blueprint-columns {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+
+        .nav-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            /* Default alignment in flex container is left, so just ensuring no other alignment properties interfere */
+            justify-content: flex-start;
+            margin-left: -40px;
+            /* Aggressive manual nudge left */
+        }
+
+        .nav-links a {
+            color: var(--deep-charcoal);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .site-search {
+            display: flex;
+            align-items: center;
+            background: #f3f4f6;
+            padding: 6px 15px;
+            border-radius: 100px;
+            border: 1px solid #e5e7eb;
+            width: 300px;
+            margin-left: auto;
+        }
+
+        .site-search input {
+            border: none;
+            background: transparent;
+            outline: none;
+            margin-left: 10px;
+            width: 100%;
+            font-size: 0.8rem;
+            color: var(--dark);
+            font-family: inherit;
+        }
+
+        .site-search .material-symbols-outlined {
+            color: #9ca3af;
+            font-size: 1.1rem;
+        }
+
+        /* STATUS GLOW ANIMATION */
+        @keyframes emerald-glow {
+            0% {
+                box-shadow: 0 0 4px #10B981, 0 0 10px rgba(16, 185, 129, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 12px #10B981, 0 0 20px rgba(16, 185, 129, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 0 4px #10B981, 0 0 10px rgba(16, 185, 129, 0.4);
+            }
+        }
+
+        .dot-glow {
+            animation: emerald-glow 2s infinite ease-in-out;
+            background-color: #10B981 !important;
+        }
+
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="hero"
+        style="position: relative; height: 300px; display: flex; align-items: center; background: url('./assets/shipping_hero.png') center/cover no-repeat; color: var(--white); overflow: visible; z-index: 3000;">
+
+        <!-- Lightened Overlay (30% opacity) -->
+        <div class="hero-overlay-mask"
+            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); z-index: 1;">
+        </div>
+
+        <!-- Left-Aligned Hero Content -->
+        <div class="container"
+            style="position: relative; z-index: 100; width: 100%; max-width: none; padding: 0 40px; margin: 0; display: flex; flex-direction: column; align-items: center; height: 100%;">
+
+            <!-- Brand Logo Text (Non-Image) - Aligned to Home Page Style -->
+            <div style="position: absolute; left: 40px; top: 15px;">
+                <div
+                    style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.6rem; font-weight: 800; line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
+                    <span style="color: white;">COPYRIGHT</span><span style="color: #0062FF;">PRINTING</span>
+                </div>
+            </div>
+
+            <!-- Cat Logo - Synchronized with Home Page -->
+            <img src="./assets/cr_logo_cat.png" alt="CopyRight Logo"
+                style="position: absolute; right: 40px; top: 140px; height: 100px; width: auto; opacity: 0.7; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); z-index: -1;">
+
+            <div class="business-block"
+                style="position: absolute; left: 40px; top: 65px; text-align: left; font-size: 0.75rem; font-weight: 500; line-height: 1.5; color: var(--white); text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                <!-- 1. Open Status -->
+                <div class="status-indicator"
+                    style="display: flex; align-items: center; gap: 0.6rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 0.2rem;">
+                    <div id="store-status-dot"
+                        style="width: 10px; height: 10px; border-radius: 50%; background: #EF4444; border: 1px solid rgba(0,0,0,0.1); transition: all 0.3s; flex-shrink: 0;">
+                    </div>
+                    <span id="store-status-text"
+                        style="color: #EF4444; font-size: 1.1rem; line-height: 1;">CLOSED</span>
+                </div>
+                <!-- 2. Weekday Hours -->
+                <div>M-F 9:00 AM - 5:00 PM</div>
+                <!-- 3. Weekend Hours -->
+                <div>SAT 11:00 AM - 2:00 PM</div>
+                <!-- 4. Address Line 1 -->
+                <div style="margin-top: 0.4rem;">5708 Hollister Avenue</div>
+                <!-- 5. Location Note -->
+                <div style="font-style: italic; opacity: 0.9;">under the red awning</div>
+                <!-- 6. City/State -->
+                <div>Goleta CA 93117</div>
+                <!-- 7. Email -->
+                <div style="margin-top: 0.4rem;">
+                    <a href="mailto:orders@copyrightsb.com"
+                        style="color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5);">orders@copyrightsb.com</a>
+                </div>
+            </div>
+
+            <!-- Spacer with Hero Title (Raised) -->
+            <div
+                style="height: 48px; width: 100%; display: flex; align-items: flex-end; justify-content: center; margin-top: -10px;">
+                <h1 class="hero-title"
+                    style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.76rem; margin: 0; font-weight: 800; text-align: center; width: 100%; line-height: 1; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); color: white;">
+                    Authorized Ship Center & Drop-Off Hub
+                </h1>
+            </div>
+
+            <!-- Action Buttons (Centered Stack) -->
+            <div
+                style="flex-grow: 1; display: flex; align-items: center; justify-content: center; width: 100%; position: relative;">
+                <div class="action-stack"
+                    style="display: flex; flex-direction: column; gap: 0.6rem; align-items: center; justify-content: center; margin-top: -5px; width: 100%;">
+
+                    <!-- 1. Track Package -->
+                    <button class="btn btn-track" onclick="toggleTrackingModal()"
+                        style="padding: 0.5rem; width: 280px; background-color: #0062FF; color: var(--white); border-radius: 14px; border: none; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s; cursor: pointer;">
+                        <span style="font-weight: 800; font-size: 0.9rem;">TRACK PACKAGE</span>
+                        <span style="font-size: 0.65rem; opacity: 0.9; font-weight: 500;">UPS, FedEx, DHL, USPS</span>
+                    </button>
+
+                    <!-- 2. Start Copy Order -->
+                    <button class="btn btn-white" onclick="window.location.href='print.html'"
+                        style="padding: 0.5rem; width: 280px; height: 48px; background-color: var(--white); color: var(--deep-charcoal); border-radius: 14px; border: none; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s;">
+                        <span style="font-weight: 800; font-size: 0.9rem;">START COPY ORDER</span>
+                    </button>
+
+                    <!-- 3. Book Services (Dropdown) -->
+                    <div style="position: relative; display: inline-block; z-index: 10001;">
+                        <button onclick="toggleAppointmentMenu()" id="bookBtn"
+                            style="background: #d4af37; color: #000; padding: 0.5rem; width: 280px; border: none; font-weight: 800; text-transform: uppercase; cursor: pointer; border-radius: 14px; letter-spacing: 1px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; height: 48px;">
+                            BOOK A SERVICE <span id="btnArrow">↓</span>
+                        </button>
+
+                        <div id="appointmentDropdown"
+                            style="display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 650px; background: #1A1A1A; border: 1px solid #D4AF37; z-index: 999999 !important; box-shadow: 0 20px 50px rgba(0,0,0,0.9); border-radius: 12px; overflow: hidden; text-align: left; padding: 25px;">
+
+                            <div style="display: flex; gap: 20px; justify-content: space-between;">
+                                <!-- Pillar 1: IN-OFFICE -->
+                                <div
+                                    style="flex: 1; border-right: 1px solid rgba(212, 175, 55, 0.2); padding-right: 10px;">
+                                    <div
+                                        style="font-size: 0.75rem; font-weight: 900; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 4px;">
+                                        IN-OFFICE</div>
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/notary" target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Notary <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/live-scan" target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Live Scan <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/shred-while-you-wait"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Shred-While-You-Wait <span>→</span></a>
+                                    </div>
+                                </div>
+
+                                <!-- Pillar 2: MOBILE UNITS -->
+                                <div
+                                    style="flex: 1; border-right: 1px solid rgba(212, 175, 55, 0.2); padding-right: 10px;">
+                                    <div
+                                        style="font-size: 0.75rem; font-weight: 900; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 4px;">
+                                        MOBILE UNITS</div>
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/mobile-services-notary"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Mobile Notary <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/mobile-services-live-scan"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Mobile Live Scan <span>→</span></a>
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/mobile-services-shredding"
+                                            target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Mobile Shredding <span>→</span></a>
+                                    </div>
+                                </div>
+
+                                <!-- Pillar 3: CREATIVE -->
+                                <div style="flex: 1;">
+                                    <div
+                                        style="font-size: 0.75rem; font-weight: 900; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); padding-bottom: 4px;">
+                                        CREATIVE</div>
+                                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                                        <a href="https://cal.com/phebe-mansur-s4ynzd/graphic-design" target="_blank"
+                                            style="color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; transition: 0.2s;"
+                                            onmouseover="this.style.color='#D4AF37'"
+                                            onmouseout="this.style.color='#fff'">Graphic & Web Design <span>→</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function toggleAppointmentMenu() {
+                    var d = document.getElementById("appointmentDropdown");
+                    var a = document.getElementById("btnArrow");
+                    var isHidden = (d.style.display === "none" || d.style.display === "");
+                    d.style.display = isHidden ? "block" : "none";
+                    a.innerHTML = isHidden ? "↑" : "↓";
+                }
+
+                window.addEventListener('click', function (e) {
+                    if (!e.target.closest('#bookBtn')) {
+                        var d = document.getElementById("appointmentDropdown");
+                        if (d) {
+                            d.style.display = "none";
+                            document.getElementById("btnArrow").innerHTML = "↓";
+                        }
+                    }
+                });
+            </script>
+        </div>
+        <!-- Neural Cat AI Bar -->
+        <div class="neural-cat-bar"
+            style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.5rem 0; background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(5px); z-index: 20; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="container" style="max-width: none; padding: 0 40px;">
+                <div class="neural-content" style="display: flex; align-items: center; justify-content: space-between;">
+                    <div class="neural-label"
+                        style="font-size: 0.7rem; letter-spacing: 0.2em; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.8rem;">
+                        <img src="./assets/neural_cat_logo.png" alt="Neural Cat AI" class="neural-icon-img"
+                            style="width: 18px; height: 18px;">
+                        POWERED BY NEURAL CAT AI
+                    </div>
+                    <div class="everytown-label"
+                        style="font-size: 0.7rem; letter-spacing: 0.2em; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.8rem;">
+                        SHOP EVERYTOWN
+                        <img src="./assets/shopeverytown-logo-white.png" alt="Shop EveryTown" class="everytown-icon-img"
+                            style="width: 18px; height: 18px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav
+        style="background: white; border-bottom: 1px solid #eee; padding: 0 40px 0 0; height: 60px; display: flex; align-items: center;">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="shipping.html" style="color: #4ade80;">Shipping</a>
+                <a href="mailboxes.html">Mailboxes</a>
+                <a href="print.html">Copy & Print</a>
+                <a href="legal.html">Legal</a>
+                <a href="ai-tools.html">AI Tools</a>
+                <a href="branding.html">Branding</a>
+                <a href="creative.html">Creative & Publishing</a>
+                <a href="retail.html">Retail</a>
+            </div>
+            <div class="site-search">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Search services...">
+            </div>
+        </div>
+    </nav>
+
+    <section class="blueprint-section">
+        <div class="blueprint-container">
+            <h1 class="blueprint-header">Shipping & Global Logistics</h1>
+            <style>
+                .logistics-grid-3 {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 3rem;
+                    /* Branding: More whitespace */
+                    margin-bottom: 4rem;
+                }
+
+                .logistics-grid-2 {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 3rem;
+                    margin-bottom: 4rem;
+                }
+
+                .logistics-card {
+                    display: flex;
+                    flex-direction: column;
+                    background: transparent;
+                    border: none;
+                    box-shadow: none;
+                    overflow: visible;
+                    height: auto;
+                    text-align: left;
+                    /* Align like reference */
+                }
+
+                .logistics-card-image {
+                    width: 100%;
+                    height: 240px;
+                    /* Rectangular aspect */
+                    background-size: cover;
+                    background-position: center;
+                    margin-bottom: 1.5rem;
+                    /* No border radius or very subtle */
+                    border-radius: 4px;
+                }
+
+                .card-content {
+                    padding: 0;
+                    color: #333;
+                }
+
+                .logistics-title {
+                    font-family: 'Inter', sans-serif;
+                    /* Clean sans-serif */
+                    font-size: 1.25rem;
+                    /* ~20px - slightly larger */
+                    font-weight: 700;
+                    /* Bold */
+                    margin-bottom: 0.75rem;
+                    color: #191919;
+                    text-transform: none;
+                    /* Sentence case */
+                    letter-spacing: -0.01em;
+                    line-height: 1.3;
+                }
+
+                .logistics-desc {
+                    font-family: 'Inter', sans-serif;
+                    font-size: 0.95rem;
+                    color: #595959;
+                    /* Accessibility friendly grey */
+                    line-height: 1.6;
+                    /* Consistent leading */
+                    margin-bottom: 1.5rem;
+                    max-width: 100%;
+                    text-shadow: none;
+                }
+
+                .card-btn {
+                    display: inline-block;
+                    padding: 0.6rem 1.5rem;
+                    background-color: #0066FF;
+                    /* Electric Cobalt */
+                    color: white !important;
+                    /* Force white text */
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    /* Bold */
+                    font-size: 0.85rem;
+                    border: none;
+                    letter-spacing: 0.5px;
+                    transition: background-color 0.2s, transform 0.2s;
+                    margin-top: auto;
+                    border-radius: 50px;
+                    /* Solid Pill Button */
+                    text-align: center;
+                    width: fit-content;
+                }
+
+                .card-btn:hover {
+                    background-color: #0052cc;
+                    /* Darker shade on hover */
+                    color: white !important;
+                    text-decoration: none;
+                    transform: translateY(-1px);
+                    box-shadow: 0 4px 6px rgba(0, 102, 255, 0.2);
+                }
+
+                /* Strategic Icons Update */
+                .strategic-icon {
+                    font-size: 29px !important;
+                    /* increased by ~20% */
+                    color: #0066FF !important;
+                    /* Electric Cobalt */
+                }
+
+                .strategic-label {
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    margin-top: 4px;
+                    font-weight: 700;
+                    color: #191919;
+                    /* Matte Black */
+                }
+
+                /* Hide standard icons */
+                .logistics-icon {
+                    display: none;
+                }
+
+                /* Hover effect only on image brightness maybe? Reference is static */
+                .logistics-card:hover {
+                    transform: none;
+                    box-shadow: none;
+                }
+
+                .logistics-card-image:hover {
+                    filter: brightness(1.05);
+                    transition: filter 0.3s;
+                }
+
+                @media (max-width: 1000px) {
+
+                    .logistics-grid-3,
+                    .logistics-grid-2 {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 2rem;
+                    }
+                }
+
+                @media (max-width: 600px) {
+
+                    .logistics-grid-3,
+                    .logistics-grid-2 {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .logistics-card-image {
+                        height: 200px;
+                    }
+                }
+
+                /* Carrier Icon Strip */
+                .carrier-strip {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    margin-top: -0.5rem;
+                }
+
+                .carrier-icon {
+                    height: 24px;
+                    width: auto;
+                    opacity: 0.2;
+                    filter: grayscale(100%);
+                    transition: all 0.3s ease;
+                }
+
+                .carrier-strip:hover .carrier-icon {
+                    opacity: 1;
+                    filter: grayscale(0%);
+                }
+            </style>
+
+            <!-- ROW 1 (3 Cards) -->
+            <div class="logistics-grid-3">
+                <!-- 1. Authorized Shipping Center -->
+                <div class="logistics-card">
+                    <div class="logistics-card-image" style="background-image: url('./assets/matrix_shipping.webp');">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="logistics-title">Authorized Shipping Center</h3>
+                        <div class="logistics-desc">
+                            Authorized multi-carrier center for UPS, FedEx, DHL, and USPS. From overnight documents to
+                            international parcels, we provide objective rate-shopping to balance speed and budget.
+                        </div>
+                        <a href="mailto:shipping@copyrightsb.com?subject=Parcel Tracking Quote" class="card-btn">GET A
+                            QUOTE</a>
+                    </div>
+                </div>
+
+                <!-- 2. Drop Off -->
+                <div class="logistics-card">
+                    <div class="logistics-card-image" style="background-image: url('./assets/matrix_compliance.webp');">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="logistics-title">Consolidated Carrier Drop-Off</h3>
+                        <div class="logistics-desc">
+                            Drop off pre-labeled packages for UPS, FedEx, USPS, and DHL in one secure location. Includes
+                            FedEx Easy Returns. Fast intake, professional staging, and no appointment necessary with
+                            email or printed drop-off receipts for your records. Most packages ship out the same day.
+                        </div>
+                        <div class="carrier-strip">
+                            <img src="./assets/shipping_ups.svg" alt="UPS" class="carrier-icon">
+                            <img src="./assets/shipping_fedex.svg" alt="FedEx" class="carrier-icon">
+                            <img src="./assets/shipping_usps.svg" alt="USPS" class="carrier-icon">
+                            <img src="./assets/shipping_dhl.svg" alt="DHL" class="carrier-icon">
+                        </div>
+                        <a href="#dropoff" class="card-btn">DROP OFF INFO</a>
+                    </div>
+                </div>
+
+                <!-- 3. Freight / LTL -->
+                <div class="logistics-card">
+                    <div class="logistics-card-image"
+                        style="background-image: url('./assets/copyright_staff_hero.webp');"></div>
+                    <div class="card-content">
+                        <h3 class="logistics-title">LTL Freight Services</h3>
+                        <div class="logistics-desc">
+                            End-to-end freight logistics for serious shipments. CopyRight provides domestic and
+                            international heavy-haul solutions for cargo over 150 lbs, including LTL and full truckload
+                            services. We handle the full coordination process for palletized equipment, furniture, and
+                            bulk inventory—connecting you with the right carriers, managing paperwork, and ensuring
+                            seamless door-to-door delivery.
+                        </div>
+                        <a href="mailto:shipping@copyrightsb.com?subject=Freight Quote" class="card-btn">GET FREIGHT
+                            QUOTE</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 2 (2 Cards) -->
+            <div class="logistics-grid-2">
+                <!-- 1. Bulk Mail & EDDM -->
+                <div class="logistics-card">
+                    <!-- Featured Tag on Image -->
+                    <div class="logistics-card-image"
+                        style="background-image: url('./assets/prod_mailing.webp'); position: relative;">
+                        <div
+                            style="position: absolute; top: 10px; right: 10px; background-color: #0066FF; color: white; padding: 4px 10px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                            Design Included Available
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="logistics-title">Strategic Bulk Mail & EDDM</h3>
+                        <div class="logistics-desc">
+                            Powerful direct mail campaigns for businesses, non-profits, and political organizations.
+                            CopyRight handles every step of your bulk mailing and EDDM strategy, including custom
+                            graphic design and branding optimized for USPS regulations, printing, sorting, and direct
+                            coordination for maximum cost efficiency.
+                        </div>
+
+                        <!-- Dynamic Content: Strategic Icons -->
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                            <div style="text-align: center; color: #555;">
+                                <span class="material-symbols-outlined strategic-icon"
+                                    style="font-size: 29px; color: #0066FF;">show_chart</span>
+                                <div class="strategic-label">Business</div>
+                            </div>
+                            <div style="text-align: center; color: #555;">
+                                <span class="material-symbols-outlined strategic-icon"
+                                    style="font-size: 29px; color: #DC2626;">volunteer_activism</span>
+                                <div class="strategic-label">Non-Profit</div>
+                            </div>
+                            <div style="text-align: center; color: #555;">
+                                <span class="material-symbols-outlined strategic-icon"
+                                    style="font-size: 29px; color: #10B981;">flag</span>
+                                <div class="strategic-label">Campaign</div>
+                            </div>
+                            <div style="text-align: center; color: #555;">
+                                <span class="material-symbols-outlined strategic-icon"
+                                    style="font-size: 29px; color: #8B5CF6;">brush</span>
+                                <div class="strategic-label">Design</div>
+                            </div>
+                        </div>
+
+                        <a href="mailto:orders@copyrightsb.com?subject=Strategic Mail Campaign Quote&body=I am interested in a [Commercial / Non-Profit / Political] mail campaign. I [do / do not] need assistance with my design/artwork..."
+                            class="card-btn" style="color: white !important;">REQUEST CAMPAIGN QUOTE</a>
+                    </div>
+                </div>
+                <!-- 2. Ecommerce Fulfillment -->
+                <div class="logistics-card">
+                    <div class="logistics-card-image" style="background-image: url('./assets/builder_ai_agent.webp');">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="logistics-title">E-Commerce Fulfillment</h3>
+                        <div class="logistics-desc">
+                            CopyRight ships most fulfillment orders the same day. Orders received before your daily
+                            cutoff are produced, packed, and sent out immediately, with automatic email confirmations
+                            including tracking numbers and client details—so your projects stay on schedule, fully
+                            accountable, and your customers stay happy.
+                        </div>
+                        <a href="mailto:orders@copyrightsb.com?subject=Fulfillment Partnership" class="card-btn">PARTNER
+                            WITH US</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 3 (3 Cards) -->
+            <div class="logistics-grid-3">
+                <!-- 1. Packing Materials -->
+                <div class="logistics-card">
+                    <div class="logistics-card-image" style="background-image: url('./assets/shipping_hero.webp');">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="logistics-title">Packing Materials</h3>
+                        <div class="logistics-desc">
+                            From shipping and moving boxes to bubble wrap, packing peanuts, cushioning, and strong
+                            packing tape, we’ve got all the supplies you need to pack it yourself at home—easy,
+                            affordable, and stress-free. Use our packing counter to pack in the store so you can pack
+                            and ship it in one trip.
+                        </div>
+                        <a href="#supplies" class="card-btn">VIEW SUPPLIES</a>
+                    </div>
+                </div>
+
+                <!-- 2. Professional Packing Service -->
+                <div class="logistics-card">
+                    <div class="logistics-card-image" style="background-image: url('./assets/matrix_security.webp');">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="logistics-title">Professional Packing Service</h3>
+                        <div class="logistics-desc">
+                            Let our Packing Experts handle the details and protect what matters most. From proper
+                            cushioning and structural support to carrier-compliant packaging, we secure your items to
+                            meet shipping standards—ensuring maximum insurance coverage and peace of mind.
+                        </div>
+                        <a href="mailto:shipping@copyrightsb.com?subject=Packing Service" class="card-btn">GET
+                            PACKED</a>
+                    </div>
+                </div>
+
+                <!-- 3. Crating -->
+                <div class="logistics-card">
+                    <div class="logistics-card-image" style="background-image: url('./assets/prod_crating.webp');">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="logistics-title">Custom Crating</h3>
+                        <div class="logistics-desc">
+                            Custom packaging and crating for high-value and fragile assets such as artwork, electronic
+                            equipment, furniture, and commercial equipment. CopyRight provides professional crating for
+                            both domestic and international shipping, with packing services available in-house or via
+                            mobile on-site crating at your location. We also coordinate heavy-haul freight for cargo
+                            over 150 lbs, including LTL and full freight services—managing carriers, documentation, and
+                            tracking from start to finish for a seamless logistics experience.
+                        </div>
+                        <a href="mailto:shipping@copyrightsb.com?subject=Crating Consultation" class="card-btn">CONSULT
+                            ON CRATING</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        &copy; 2026 CopyRight Systems • Goleta, CA • Powered by Neural Cat AI
+        <div
+            style="margin-top: 10px; font-size: 0.7rem; color: #9ca3af; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+            <small><strong>Beta Phase Billing Disclaimer:</strong> Due to ongoing integration with DOJ and GUSD payment
+                protocols,
+                please allow 45 days for final reconciliation. All transactions are pending until verified by the
+                Department of Justice.</small>
+        </div>
+    </footer>
+
+    <script>
+        let selectedServices = new Set(['shipping']);
+
+        function toggleOption(id, el) {
+            if (selectedServices.has(id)) {
+                selectedServices.delete(id);
+                el.style.borderColor = "#F1F5F9";
+            } else {
+                selectedServices.add(id);
+                el.style.borderColor = "var(--primary-blue)";
+            }
+            updateSummary();
+        }
+
+        function updateSummary() {
+            const count = selectedServices.size;
+            document.getElementById('service-count').innerText = `${count} Service${count > 1 ? 's' : ''} Selected`;
+
+            let basePrice = 45.00;
+            let extra = (count - 1) * 25.50;
+            document.getElementById('price-total').innerText = `$${(basePrice + extra).toFixed(2)}`;
+        }
+    </script>
+
+    <!-- TRACKING MODAL OVERLAY -->
+    <div id="trackingOverlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); z-index: 9999; align-items: center; justify-content: center;">
+        <div
+            style="background: #111; border: 1px solid #d4af37; padding: 40px; border-radius: 20px; text-align: center; max-width: 400px; width: 90%; position: relative; box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);">
+            <button onclick="toggleTrackingModal()"
+                style="position: absolute; top: 15px; right: 15px; background: none; border: none; color: #666; cursor: pointer; font-size: 1.2rem;">✕</button>
+
+            <h2
+                style="color: #d4af37; margin: 0 0 20px 0; font-family: 'Libre Baskerville', serif; text-transform: uppercase; font-size: 1.5rem;">
+                Track Package</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">Enter your tracking number below</p>
+
+            <input type="text" id="trackNum" placeholder="Tracking Number..."
+                style="width: 100%; padding: 15px; background: #222; border: 1px solid #333; color: white; border-radius: 8px; margin-bottom: 20px; font-family: 'Inter', sans-serif; font-size: 1rem; box-sizing: border-box; text-align: center; letter-spacing: 1px;">
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px;">
+                <button onclick="routeTracking('UPS')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">UPS</button>
+                <button onclick="routeTracking('FEDEX')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">FedEx</button>
+                <button onclick="routeTracking('DHL')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">DHL</button>
+                <button onclick="routeTracking('USPS')"
+                    style="padding: 10px; background: #333; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.8rem; transition: 0.2s;"
+                    onmouseover="this.style.background='#444'" onmouseout="this.style.background='#333'">USPS</button>
+            </div>
+
+            <button onclick="autoDetect()"
+                style="width: 100%; padding: 15px; background: #d4af37; color: #000; border: none; border-radius: 8px; font-weight: 900; cursor: pointer; letter-spacing: 1px; transition: 0.2s; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);"
+                onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">TRACK
+                NOW</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleTrackingModal() {
+            const modal = document.getElementById('trackingOverlay');
+            if (modal.style.display === 'flex') {
+                modal.style.display = 'none';
+            } else {
+                modal.style.display = 'flex';
+                setTimeout(() => { if (document.getElementById('trackNum')) document.getElementById('trackNum').focus(); }, 100);
+            }
+        }
+
+        window.onclick = function (e) {
+            const modal = document.getElementById('trackingOverlay');
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+        function routeTracking(carrier) {
+            const num = document.getElementById('trackNum').value.trim();
+            if (!num) { alert('Please enter a tracking number.'); return; }
+            let url = '';
+            switch (carrier) {
+                case 'UPS': url = 'https://www.ups.com/track?tracknum=' + num; break;
+                case 'FEDEX': url = 'https://www.fedex.com/fedextrack/?trknbr=' + num; break;
+                case 'DHL': url = 'https://www.dhl.com/en/express/tracking.html?AWB=' + num; break;
+                case 'USPS': url = 'https://tools.usps.com/go/TrackConfirmAction?tLabels=' + num; break;
+            }
+            window.open(url, '_blank');
+        }
+
+        function autoDetect() {
+            const num = document.getElementById('trackNum').value.trim();
+            if (!num) { alert('Please enter a tracking number.'); return; }
+            window.open('https://parcelsapp.com/en/tracking/' + num, '_blank');
+        }
+
+        // Store Hours Status Logic (Goleta, CA - PST)
+        function updateStoreStatus() {
+            const statusText = document.getElementById('store-status-text');
+            const statusDot = document.getElementById('store-status-dot');
+            if (!statusText || !statusDot) return;
+
+            const now = new Date();
+            const goletaTime = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/Los_Angeles',
+                hour12: false,
+                weekday: 'short',
+                hour: 'numeric',
+                minute: 'numeric'
+            }).formatToParts(now);
+
+            const day = goletaTime.find(p => p.type === 'weekday').value;
+            const hour = parseInt(goletaTime.find(p => p.type === 'hour').value);
+            const minute = parseInt(goletaTime.find(p => p.type === 'minute').value);
+            const totalMinutes = hour * 60 + minute;
+
+            let isOpen = false;
+
+            // Monday – Friday: 9:00 AM – 5:00 PM (540 - 1020)
+            if (['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].includes(day)) {
+                if (totalMinutes >= 540 && totalMinutes < 1020) isOpen = true;
+            }
+            // Saturday: 11 AM - 2 PM (660 - 840)
+            else if (day === 'Sat') {
+                if (totalMinutes >= 660 && totalMinutes < 840) isOpen = true;
+            }
+
+            if (isOpen) {
+                statusText.style.color = '#10B981'; // Emerald Green
+                statusText.innerHTML = 'OPEN';
+                statusDot.className = 'dot-glow';
+                statusDot.style.background = '#10B981';
+            } else {
+                statusText.style.color = '#EF4444'; // Red
+                statusText.innerHTML = 'CLOSED';
+                statusDot.className = '';
+                statusDot.style.background = '#EF4444';
+            }
+        }
+        updateStoreStatus();
+        setInterval(updateStoreStatus, 60000);
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "CopyRight Printing Systems",
+      "image": "https://copyrightsb.com/assets/matrix_shipping.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5710 Hollister Ave",
+        "addressLocality": "Goleta",
+        "addressRegion": "CA",
+        "postalCode": "93117",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.437,
+        "longitude": -119.832
+      },
+      "url": "https://copyrightsb.com/shipping.html",
+      "telephone": "+18059644433",
+      "service": [
+        {
+          "@type": "Service",
+          "name": "LTL Freight Services",
+          "description": "Heavy-haul solutions for cargo over 150 lbs, coordinating logistics for palletized equipment and bulk inventory."
+        },
+        {
+          "@type": "Service",
+          "name": "Custom Crating",
+          "description": "On-site ISPM-15 certified wood crating for high-value assets and international export."
+        },
+        {
+          "@type": "Service",
+          "name": "E-commerce Fulfillment",
+          "description": "Scalable pick-pack-ship solutions acting as a satellite warehouse for e-commerce brands."
+        }
+      ]
+    }
+    </script>
+</body>
+
+</html>

@@ -1,16 +1,14 @@
-## Hi there 👋
+# Shop EveryTown Digital Ecosystem
 
-<!--
-**CRPrint/CRPrint** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Layout Locked 2026-01-22. Primary template for CopyRight Digital Ecosystem.
 
-Here are some ideas to get you started:
+## Pricing Rules (Strict Enforcement)
+- **Minimum Order**: $2.00 (Emailed/Digital Files)
+- **B&W Printing**: $0.25 / side
+- **Color Printing**: $0.68 / side
+- **Shredding**: $15.00 / box (1-15 boxes)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Architecture
+- Root: Production files
+- /assets: Centralized media storage
+- /archive: Legacy files and documentation
