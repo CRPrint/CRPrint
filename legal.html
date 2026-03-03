@@ -7,6 +7,7 @@
     <title>Legal & Identity | CopyRight Systems</title>
     <script src="navigation.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
@@ -256,7 +257,9 @@
         /* HERO */
         .hero {
             position: relative;
-            height: 300px;
+            height: 300px !important;
+            min-height: 300px !important;
+            flex-shrink: 0;
             background: #222 url('./assets/copyright_staff_hero.png') center/cover no-repeat;
             display: flex;
             flex-direction: column;
@@ -854,38 +857,39 @@
             background-color: #10B981 !important;
         }
     </style>
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
 
 
     <section class="hero"
-        style="position: relative; height: 300px; display: flex; align-items: center; background: url('./assets/copyright_staff_hero.png') center/cover no-repeat; color: var(--white); overflow: visible; z-index: 3000;">
+        style="position: relative; height: 300px; min-height: 300px; flex-shrink: 0; display: flex; align-items: center; background: url('./assets/copyright_staff_hero.png') center/cover no-repeat; color: var(--white); overflow: visible; z-index: 3000;">
 
         <!-- Lightened Overlay (30% opacity) -->
         <div class="hero-overlay-mask"
             style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); z-index: 1;">
         </div>
 
+        <!-- Cat Logo - Synchronized with Home Page Style -->
+        <img src="./assets/copyrightlogo.png" alt="CopyRight Logo"
+            style="position: absolute; right: 40px; top: 165px; height: 100px; width: auto; opacity: 0.7; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); z-index: 9;">
+
         <!-- Left-Aligned Hero Content -->
         <div class="container"
             style="position: relative; z-index: 100; width: 100%; max-width: none; padding: 0 40px; margin: 0; display: flex; flex-direction: column; align-items: center; height: 100%;">
 
             <!-- Brand Logo Text (Non-Image) - Aligned to Home Page Style -->
-            <div style="position: absolute; left: 40px; top: 15px;">
+            <a href="./CR_index.html" style="position: absolute; left: 40px; top: 15px; text-decoration: none;">
                 <div
                     style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.6rem; font-weight: 800; line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
                     <span style="color: white;">COPYRIGHT</span><span style="color: #0062FF;">PRINTING</span>
                 </div>
-            </div>
-
-            <!-- Cat Logo - Synchronized with Home Page -->
-            <img src="./assets/cr_logo_cat.png" alt="CopyRight Logo"
-                style="position: absolute; right: 40px; top: 140px; height: 100px; width: auto; opacity: 0.7; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); z-index: -1;">
+            </a>
 
             <!-- Business Block -->
             <div class="business-block"
-                style="position: absolute; left: 40px; top: 65px; text-align: left; font-size: 0.75rem; font-weight: 500; line-height: 1.5; color: var(--white); text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
+                style="position: absolute; left: 40px; top: 72px; text-align: left; font-size: 0.75rem; font-weight: 500; line-height: 1.5; color: var(--white); text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
                 <!-- 1. Open Status -->
                 <div class="status-indicator"
                     style="display: flex; align-items: center; gap: 0.6rem; font-weight: 800; letter-spacing: 0.1em; margin-bottom: 0.2rem;">
@@ -921,11 +925,11 @@
                 </h1>
             </div>
 
-            <!-- Action Buttons (Centered Stack) -->
+            <!-- Action Buttons (Positioned to avoid Business Block) -->
             <div
-                style="flex-grow: 1; display: flex; align-items: center; justify-content: center; width: 100%; position: relative;">
+                style="flex-grow: 1; display: flex; align-items: flex-end; justify-content: center; width: 100%; position: relative; padding-bottom: 45px;">
                 <div class="action-stack"
-                    style="display: flex; flex-direction: column; gap: 0.6rem; align-items: center; justify-content: center; margin-top: -5px; width: 100%;">
+                    style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center; justify-content: center; width: 100%;">
 
                     <!-- 1. Track Package -->
                     <button class="btn btn-track" onclick="toggleTrackingModal()"

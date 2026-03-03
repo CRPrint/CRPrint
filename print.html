@@ -7,6 +7,7 @@
     <title>Copy & Print Command Center | CopyRight Systems</title>
     <script src="navigation.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
@@ -451,6 +452,7 @@
             background-color: #10B981 !important;
         }
     </style>
+    <link rel="stylesheet" href="responsive.css">
 </head>
 
 <body>
@@ -464,21 +466,21 @@
             style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); z-index: 1;">
         </div>
 
+        <!-- Cat Logo - Synchronized with Home Page Style -->
+        <img src="./assets/copyrightlogo.png" alt="CopyRight Logo"
+            style="position: absolute; right: 40px; top: 165px; height: 100px; width: auto; opacity: 0.7; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); z-index: 9;">
+
         <!-- Left-Aligned Hero Content -->
         <div class="container"
             style="position: relative; z-index: 100; width: 100%; max-width: none; padding: 0 40px; margin: 0; display: flex; flex-direction: column; align-items: center; height: 100%;">
 
             <!-- Brand Logo Text (Non-Image) - Aligned to Home Page Style -->
-            <div style="position: absolute; left: 40px; top: 15px;">
+            <a href="./CR_index.html" style="position: absolute; left: 40px; top: 15px; text-decoration: none;">
                 <div
                     style="font-family: 'Segoe UI', Arial, sans-serif; font-size: 1.6rem; font-weight: 800; line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
                     <span style="color: white;">COPYRIGHT</span><span style="color: #0062FF;">PRINTING</span>
                 </div>
-            </div>
-
-            <!-- Cat Logo - Synchronized with Home Page -->
-            <img src="./assets/cr_logo_cat.png" alt="CopyRight Logo"
-                style="position: absolute; right: 40px; top: 140px; height: 100px; width: auto; opacity: 0.7; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); z-index: -1;">
+            </a>
 
             <!-- Business Block -->
             <div class="business-block"
@@ -682,7 +684,7 @@
                 <a href="creative.html"
                     style="color: var(--deep-charcoal); text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Creative
                     & Publishing</a>
-                <a href="retail.html"
+                <a href="retail.html#the-boutique"
                     style="color: var(--deep-charcoal); text-decoration: none; font-size: 0.75rem; font-weight: 700; text-transform: uppercase;">Retail</a>
             </div>
             <div class="site-search"
@@ -960,9 +962,24 @@
         </div>
         <!-- Right Panel: Checkout Hub -->
         <div class="checkout-hub">
-            <div class="live-total">
-                <div class="total-label">Live Total</div>
-                <div class="total-amount" id="total-price">$12.50</div>
+            <div class="live-total"
+                style="display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; background: #1a1a1a; border-radius: 12px; margin-bottom: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #94A3B8;">
+                    <span>Job Subtotal:</span>
+                    <span id="subtotal-price">$0.00</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: #94A3B8;">
+                    <span>4% Courtesy Fee:</span>
+                    <span id="fee-price">$0.00</span>
+                </div>
+                <div
+                    style="display: flex; flex-direction: column; align-items: flex-end; border-top: 1px solid #334155; padding-top: 1rem; margin-top: 0.5rem;">
+                    <span
+                        style="font-size: 0.65rem; font-weight: 800; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.2rem;">Grand
+                        Total</span>
+                    <span id="total-price" class="total-amount"
+                        style="font-size: 1.85rem; font-weight: 400; color: #FFFFFF; line-height: 1;">$0.00</span>
+                </div>
             </div>
 
             <div class="cta-stack">
@@ -975,7 +992,7 @@
                     <span class="material-symbols-outlined">cloud_upload</span>
                     Upload File
                 </button>
-                <button class="btn-master" id="main-cta" onclick="checkout()">
+                <button class="btn-master" id="main-cta" onclick="handleCheckout()">
                     Check Out and Pay
                 </button>
             </div>
@@ -1684,16 +1701,25 @@
             let costPerSet = totalBaseCost + totalAddonCost;
 
             // Grand Total
-            let grandTotal = (costPerSet * currentQty) + (perUnitAddonCost * currentQty);
+            let subtotal = (costPerSet * currentQty) + (perUnitAddonCost * currentQty);
             // Minimum Order Enforcer ($2.00)
             let isMinApplied = false;
-            if (grandTotal < 2.00) {
-                grandTotal = 2.00;
+            if (subtotal < 2.00) {
+                subtotal = 2.00;
                 isMinApplied = true;
             }
 
+            // Calculate 4% Courtesy Fee
+            const courtesyFee = subtotal * 0.04;
+            const grandTotal = subtotal + courtesyFee;
+
+            const subtotalDisplay = document.getElementById('subtotal-price');
+            const feeDisplay = document.getElementById('fee-price');
             const totalDisplay = document.getElementById('total-price');
-            totalDisplay.textContent = `$${grandTotal.toFixed(2)}`;
+
+            if (subtotalDisplay) subtotalDisplay.textContent = `$${subtotal.toFixed(2)}`;
+            if (feeDisplay) feeDisplay.textContent = `$${courtesyFee.toFixed(2)}`;
+            if (totalDisplay) totalDisplay.textContent = `$${grandTotal.toFixed(2)}`;
 
             // Proactive Notification Logic
             let minCaption = document.getElementById('min-order-caption');
@@ -1921,6 +1947,12 @@
             alert('Add Another Job functionality - would open a new configuration panel');
         }
 
+        function handleCheckout() {
+            const grandTotal = parseFloat(document.querySelector('.total-amount').innerText.replace('$', ''));
+            const payLink = "https://pymntlink.com/payment-link?token=MThmZDhmNmNlOGI3ZThhMmY2MjJkMGI0ZjczOTczOTE6NTliNzMxOGVlMTQyYjA3MDEwY2NhOTQxMTQ4MTdkZjAwZjM1NmU5ZWEyNWU1YTdmYmM4NmYwZTk1NGZlZDcyMGRiNWJkNGQzYjMyZmIxZWI1MjYwYzhhZTliNjU4ZDdkZmU3NTNmYjc4YTYzNTczNDY1ZGRkYjU4Yjg2MDRjNGNmZjYyY2EzNzQ3ZWNjYmUzZTYwYzY3Y2YyZmQxMDBjN2E2YmFiZWFiOTg4OTkyN2MwY2U0ZmYxYzNiNzI4NDg2ZGExMmE4MDQwMzFiMzVkZDMzYjc4ZGEyNzFhNGFjODMxNWIwOWJkY2IxZWIwYWJlNTdjMDNiOTc3YzJlNGEwMjQxYTdhYWI5ZGJlZTQyOTJmMWU0YjZkNjFjMjY5ZTFhZTc2M2ZmZWQ4YWQ2ZWZhNzM4NDliYWQ1OGZkMTJhZDMwNWQ4ZWQ3ZjUzMTc1YTcxYmRlMTc2ZDRkMGU0MWViYjBiYWJhZmY5YjFhMzA0NjBmZDU3NTkxMWFlOTBhNzg3";
+            window.location.href = payLink + "&amount=" + grandTotal.toFixed(2);
+        }
+
         function checkout() {
             const specialtyAddons = ['cutting', 'folding', 'scoring', 'perforation', 'padding'];
             const activeSpecialty = addons.filter(a => specialtyAddons.includes(a));
@@ -1947,7 +1979,25 @@
                 const bcc = encodeURIComponent(`copyrightprintingsb@gmail.com`);
                 window.location.href = `mailto:orders@copyrightsb.com?subject=${subject}&body=${body}&bcc=${bcc}`;
             } else {
-                alert('Proceeding to checkout with total: ' + document.getElementById('total-price').textContent);
+                // PayAnywhere Final Integration Logic
+                const totalDisplay = document.getElementById('total-price').textContent.replace('$', '');
+                const finalAmount = parseFloat(totalDisplay).toFixed(2);
+
+                // Update UI Feedback
+                const mainCta = document.getElementById('main-cta');
+                if (mainCta) {
+                    mainCta.innerHTML = 'Redirecting to Secure Payment...';
+                    mainCta.style.cursor = 'wait';
+                    mainCta.style.opacity = '0.7';
+                    mainCta.disabled = true;
+                }
+
+                // Redirect to PayAnywhere Token URL
+                const tokenUrl = 'https://pymntlink.com/payment-link?token=MThmZDhmNmNlOGI3ZThhMmY2MjJkMGI0ZjczOTczOTE6NTliNzMxOGVlMTQyYjA3MDEwY2NhOTQxMTQ4MTdkZjAwZjM1NmU5ZWEyNWU1YTdmYmM4NmYwZTk1NGZlZDcyMGRiNWJkNGQzYjMyZmIxZWI1MjYwYzhhZTliNjU4ZDdkZmU3NTNmYjc4YTYzNTczNDY1ZGRkYjU4Yjg2MDRjNGNmZjYyY2EzNzQ3ZWNjYmUzZTYwYzY3Y2YyZmQxMDBjN2E2YmFiZWFiOTg4OTkyN2MwY2U0ZmYxYzNiNzI4NDg2ZGExMmE4MDQwMzFiMzVkZDMzYjc4ZGEyNzFhNGFjODMxNWIwOWJkY2IxZWIwYWJlNTdjMDNiOTc3YzJlNGEwMjQxYTdhYWI5ZGJlZTQyOTJmMWU0YjZkNjFjMjY5ZTFhZTc2M2ZmZWQ4YWQ2ZWZhNzM4NDliYWQ1OGZkMTJhZDMwNWQ4ZWQ3ZjUzMTc1YTcxYmRlMTc2ZDRkMGU0MWViYjBiYWJhZmY5YjFhMzA0NjBmZDU3NTkxMWFlOTBhNzg3';
+
+                setTimeout(() => {
+                    window.location.href = `${tokenUrl}&amount=${finalAmount}`;
+                }, 800);
             }
         }
 
