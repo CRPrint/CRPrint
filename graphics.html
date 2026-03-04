@@ -123,7 +123,7 @@
         .hero {
             position: relative;
             height: 300px;
-            background: #222 url('copyright_staff_hero.png') center/cover no-repeat;
+            background: #222 url('./assets/copyright_staff_hero.png') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -411,8 +411,9 @@
 
     <header
         style="padding: 40px 40px 1rem; background: transparent; position: absolute; width: 100%; z-index: 100; display: flex; justify-content: space-between; align-items: center;">
-        <a href="index.html" class="logo" style="text-decoration: none;">
-            <div class="brand" style="font-size: 1.5rem; font-weight: 800; line-height: 1; color: var(--white);">
+        <a href="CR_index.html" class="logo" style="text-decoration: none;">
+            <div class="brand"
+                style="font-size: 1.5rem; font-weight: 800; line-height: 1; color: var(--white); position: absolute; left: 40px; top: 15px;">
                 COPYRIGHT<span style="color: var(--primary-blue);">PRINTING</span></div>
         </a>
         <!-- Hero Headline Moved to Logo Line (Raised) -->
@@ -426,7 +427,11 @@
     </header>
 
     <section class="hero"
-        style="position: relative; height: 300px; display: flex; align-items: center; background: url('copyright_staff_hero.png') center/cover no-repeat; color: var(--white); overflow: hidden;">
+        style="position: relative; height: 300px; display: flex; align-items: center; background: url('./assets/copyright_staff_hero.png') center/cover no-repeat; color: var(--white); overflow: hidden;">
+
+        <!-- Cat Logo - Synchronized with Home Page Style -->
+        <img src="./assets/copyrightlogo.png" alt="CopyRight Logo"
+            style="position: absolute; right: 40px; top: 165px; height: 100px; width: auto; opacity: 0.7; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5)); z-index: 9;">
 
         <!-- Lightened Overlay (30% opacity) -->
         <div class="hero-overlay-mask"
@@ -586,14 +591,14 @@
                 <div class="neural-content" style="display: flex; align-items: center; justify-content: space-between;">
                     <div class="neural-label"
                         style="font-size: 0.7rem; letter-spacing: 0.2em; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.8rem;">
-                        <img src="neural_cat_logo.png" alt="Neural Cat AI" class="neural-icon-img"
+                        <img src="./assets/neural_cat_logo.png" alt="Neural Cat AI" class="neural-icon-img"
                             style="width: 18px; height: 18px;">
                         POWERED BY NEURAL CAT AI
                     </div>
                     <div class="everytown-label"
                         style="font-size: 0.7rem; letter-spacing: 0.2em; font-weight: 800; color: var(--white); display: flex; align-items: center; gap: 0.8rem;">
                         SHOP EVERYTOWN
-                        <img src="shopeverytown-logo-white.png" alt="Shop EveryTown" class="everytown-icon-img"
+                        <img src="./assets/shopeverytown-logo-white.png" alt="Shop EveryTown" class="everytown-icon-img"
                             style="width: 18px; height: 18px;">
                     </div>
                 </div>
